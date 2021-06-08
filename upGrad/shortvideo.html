@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/shortvideo.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="title">
+      <div>
+        <div id="logo">upGrad</div>
+        <div>Shorts</div>
+      </div>
+    </div>
+    <div id="afterTitle" class="mobileHidden">
+      <div id="interface"><img src="img/interface.png" /></div>
+      <div>
+        <h2>Quick 5-min Explainer Videos</h2>
+        <h1>Shorts</h1>
+      </div>
+    </div>
+    <div id="middle">
+      <div id="list">
+        <ul>
+          <li onclick="change1(event)" class="selected">All (24)</li>
+          <li onclick="change2(event)">Interview Tips (5)</li>
+          <li onclick="change3(event)">Soft Skills (5)</li>
+          <li onclick="change4(event)">Book Summary (6)</li>
+          <li onclick="change5(event)">Everyday Tech (8)</li>
+        </ul>
+      </div>
+      <div id="items">
+        <div id="item1" class="all book">
+          <div class="time">02:03</div>
+          <div class="videoTitle">
+            <p>Vicky Kaushal</p>
+            <h2>Kaise Bane Hyperfocused?</h2>
+            <div class="views">177 views</div>
+          </div>
+        </div>
+        <div id="item2" class="all soft">
+          <div class="time">01:35</div>
+          <div class="videoTitle">
+            <p>Sarabjeet Sachar</p>
+            <h2>Self Awareness Se Kaam Mein Behtar Baniye</h2>
+            <div class="views">18 views</div>
+          </div>
+        </div>
+        <div id="item3" class="all soft">
+          <div class="time">00:50</div>
+          <div class="videoTitle">
+            <p>Sarabjeet Sachar</p>
+            <h2>Lifelong Learner Kaise Bane?</h2>
+            <div class="views">11 views</div>
+          </div>
+        </div>
+        <div id="item4" class="all tips">
+          <div class="time">00:42</div>
+          <div class="videoTitle">
+            <p>Ankur Warkoor</p>
+            <h2>Top 5 Expert Tips</h2>
+            <div class="views">31 views</div>
+          </div>
+        </div>
+        <div id="item5" class="all soft">
+          <div class="time">01:27</div>
+          <div class="videoTitle">
+            <p>Sarabjeet Sachar</p>
+            <h2>Safalta Payien Creativity Aur Innovation Se</h2>
+            <div class="views">10 views</div>
+          </div>
+        </div>
+        <div id="item6" class="all tech">
+          <div class="time">02:48</div>
+          <div class="videoTitle">
+            <p>Aparna Dolia</p>
+            <h2>Google kaise "Google" karta hai?</h2>
+            <div class="views">7 views</div>
+          </div>
+        </div>
+        <div id="item7" class="all book">
+          <div class="time">01:31</div>
+          <div class="videoTitle">
+            <p>Vicky Kaushal</p>
+            <h2>Be Fearless By Jean Case</h2>
+            <div class="views">7 views</div>
+          </div>
+        </div>
+        <div id="item8" class="all tech">
+          <div class="time">02:40</div>
+          <div class="videoTitle">
+            <p>Aparna Dolia</p>
+            <h2>reCAPTCHA hota kya hai?</h2>
+            <div class="views">0 views</div>
+          </div>
+        </div>
+        <div id="item9" class="all book">
+          <div class="time">02:18</div>
+          <div class="videoTitle">
+            <p>Vicky Kaushal</p>
+            <h2>Soonish by Kelly & Zach Weinersmith</h2>
+            <div class="views">5 views</div>
+          </div>
+        </div>
+        <div id="item10" class="all tips">
+          <div class="time">00:35</div>
+          <div class="videoTitle">
+            <p>Ankur Warikoo</p>
+            <h2>"Tell me about yourself" ka sahi jawab</h2>
+            <div class="views">135 views</div>
+          </div>
+        </div>
+        <div id="item11" class="all tech">
+          <div class="time">01:47</div>
+          <div class="videoTitle">
+            <p>Aparna Dolia</p>
+            <h2>Mobile Battery Ko Kitna Charge Karien?</h2>
+            <div class="views">7 views</div>
+          </div>
+        </div>
+        <div id="item12" class="all soft">
+          <div class="time">01:30</div>
+          <div class="videoTitle">
+            <p>Sarabjeet Sachar</p>
+            <h2>Recruiter Ko Kaise Impress Karien?</h2>
+            <div class="views">11 views</div>
+          </div>
+        </div>
+        <div id="item13" class="all tech">
+          <div class="time">01:38</div>
+          <div class="videoTitle">
+            <p>Aparna Dolia</p>
+            <h2>Emergency Call Kaise Karte Hain?</h2>
+            <div class="views">4 views</div>
+          </div>
+        </div>
+        <div id="item14" class="all tech">
+          <div class="time">02:13</div>
+          <div class="videoTitle">
+            <p>Aparna Dolia</p>
+            <h2>Facial Recognition Kaise Kaam Karta Hai?</h2>
+            <div class="views">3 views</div>
+          </div>
+        </div>
+        <div id="item15" class="all book">
+          <div class="time">02:31</div>
+          <div class="videoTitle">
+            <p>Vicky Kaushal</p>
+            <h2>The 5 AM Club by Robin Sharma</h2>
+            <div class="views">19 views</div>
+          </div>
+        </div>
+        <div id="item16" class="all tips">
+          <div class="time">00:41</div>
+          <div class="videoTitle">
+            <p>Ankur Warkoo</p>
+            <h2>Salary Hike Paane Ke Tips</h2>
+            <div class="views">35 views</div>
+          </div>
+        </div>
+        <div id="item17" class="all book">
+          <div class="time">02:48</div>
+          <div class="videoTitle">
+            <p>Vicky Kaushal</p>
+            <h2>Chanakya Neeti By Dr. Radhakrishna Pillai</h2>
+            <div class="views">18 views</div>
+          </div>
+        </div>
+        <div id="item18" class="all soft">
+          <div class="time">00:58</div>
+          <div class="videoTitle">
+            <p>Sarabjeet Sachar</p>
+            <h2>5 Skills Jo Aapko Employable Banayenge</h2>
+            <div class="views">27 views</div>
+          </div>
+        </div>
+        <div id="item19" class="all tips">
+          <div class="time">00:42</div>
+          <div class="videoTitle">
+            <p>Ankur Warkoo</p>
+            <h2>Interview Crack Karne Ki Strategy</h2>
+            <div class="views">31 views</div>
+          </div>
+        </div>
+        <div id="item20" class="all book">
+          <div class="time">01:54</div>
+          <div class="videoTitle">
+            <p>Vicky Kaushal</p>
+            <h2>Eat That Frog By Brian Tracy</h2>
+            <div class="views">19 views</div>
+          </div>
+        </div>
+        <div id="item21" class="all tips">
+          <div class="time">00:47</div>
+          <div class="videoTitle">
+            <p>Ankur Warkoo</p>
+            <h2>Video Interview Tips</h2>
+            <div class="views">17 views</div>
+          </div>
+        </div>
+        <div id="item22" class="all tech">
+          <div class="time">01:52</div>
+          <div class="videoTitle">
+            <p>Aparna Doliao</p>
+            <h2>Language Translation Ke Aasan Upay</h2>
+            <div class="views">81 views</div>
+          </div>
+        </div>
+        <div id="item23" class="all tech">
+          <div class="time">03:12</div>
+          <div class="videoTitle">
+            <p>Aparna Doliao</p>
+            <h2>Apne Data Ko Kaise Surakshit Rakhien?</h2>
+            <div class="views">83 views</div>
+          </div>
+        </div>
+        <div id="item24" class="all tech">
+          <div class="time">02:09</div>
+          <div class="videoTitle">
+            <p>Aparna Doliao</p>
+            <h2>A.I. Kaise Kaam Karta Hai?</h2>
+            <div class="views">114 views</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  function change1(e) {
+    let a = e.target;
+    let p = a.parentElement.children;
+    for (var i = 0; i < p.length; i++) {
+      p[i].removeAttribute("class", "selected");
+    }
+
+    a.setAttribute("class", "selected");
+
+    let all = document.querySelectorAll(".all");
+    all.forEach(function (a) {
+      a.style.display = "flex";
+    });
+
+    let ani = document.getElementById("items");
+    ani.style.transform = "translateY(40px)";
+    ani.style.opacity = "0.3";
+    setTimeout(function (b) {
+      ani.style.transform = "translateY(0px)";
+      ani.style.opacity = "1";
+    }, 200);
+  }
+
+  function change2(e) {
+    let a = e.target;
+    let p = a.parentElement.children;
+    for (var i = 0; i < p.length; i++) {
+      p[i].removeAttribute("class", "selected");
+    }
+
+    a.setAttribute("class", "selected");
+
+    let all = document.querySelectorAll(".all");
+    all.forEach(function (a) {
+      a.style.display = "none";
+    });
+
+    let tips = document.querySelectorAll(".tips");
+    tips.forEach(function (a) {
+      a.style.display = "flex";
+    });
+
+    let ani = document.getElementById("items");
+    ani.style.transform = "translateY(40px)";
+    ani.style.opacity = "0.3";
+    setTimeout(function (b) {
+      ani.style.transform = "translateY(0px)";
+      ani.style.opacity = "1";
+    }, 200);
+  }
+
+  function change3(e) {
+    let a = e.target;
+    let p = a.parentElement.children;
+    for (var i = 0; i < p.length; i++) {
+      p[i].removeAttribute("class", "selected");
+    }
+
+    a.setAttribute("class", "selected");
+
+    let all = document.querySelectorAll(".all");
+    all.forEach(function (a) {
+      a.style.display = "none";
+    });
+
+    let soft = document.querySelectorAll(".soft");
+    soft.forEach(function (a) {
+      a.style.display = "flex";
+    });
+
+    let ani = document.getElementById("items");
+    ani.style.transform = "translateY(40px)";
+    ani.style.opacity = "0.3";
+    setTimeout(function (b) {
+      ani.style.transform = "translateY(0px)";
+      ani.style.opacity = "1";
+    }, 200);
+  }
+
+  function change4(e) {
+    let a = e.target;
+    let p = a.parentElement.children;
+    for (var i = 0; i < p.length; i++) {
+      p[i].removeAttribute("class", "selected");
+    }
+
+    a.setAttribute("class", "selected");
+
+    let all = document.querySelectorAll(".all");
+    all.forEach(function (a) {
+      a.style.display = "none";
+    });
+
+    let book = document.querySelectorAll(".book");
+    book.forEach(function (a) {
+      a.style.display = "flex";
+    });
+
+    let ani = document.getElementById("items");
+    ani.style.transform = "translateY(40px)";
+    ani.style.opacity = "0.3";
+    setTimeout(function (b) {
+      ani.style.transform = "translateY(0px)";
+      ani.style.opacity = "1";
+    }, 200);
+  }
+
+  function change5(e) {
+    let a = e.target;
+    let p = a.parentElement.children;
+    for (var i = 0; i < p.length; i++) {
+      p[i].removeAttribute("class", "selected");
+    }
+
+    a.setAttribute("class", "selected");
+
+    let all = document.querySelectorAll(".all");
+    all.forEach(function (a) {
+      a.style.display = "none";
+    });
+
+    let tech = document.querySelectorAll(".tech");
+    tech.forEach(function (a) {
+      a.style.display = "flex";
+    });
+
+    let ani = document.getElementById("items");
+    ani.style.transform = "translateY(40px)";
+    ani.style.opacity = "0.3";
+    setTimeout(function (b) {
+      ani.style.transform = "translateY(0px)";
+
+      ani.style.opacity = "1";
+    }, 200);
+  }
+</script>

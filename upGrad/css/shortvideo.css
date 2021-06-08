@@ -1,0 +1,425 @@
+body {
+  font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  height: 100%;
+  background-color: #f4f5f7;
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: normal;
+  font-feature-settings: "liga", "clig";
+  font-variant-ligatures: common-ligatures;
+  color: #1a202c;
+  margin: 0px;
+}
+
+#title {
+  padding: 30px 0;
+  background: #071936;
+  color: rgb(255, 255, 255);
+}
+
+#title #logo {
+  color: rgb(233, 84, 84);
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -1px;
+}
+#title div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#title > div {
+  outline: 1px solid red;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 110px;
+}
+#title > div div {
+  margin: -3px 5px;
+  padding: 0px;
+}
+#title > div > div:nth-child(2) {
+  font-size: 20px;
+  font-weight: 600;
+  border-left: 2px solid white;
+  padding-left: 10px;
+}
+#afterTitle {
+  background: #091e42;
+  color: #fff;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 295px;
+}
+
+#interface {
+  position: relative;
+  left: 748px;
+  z-index: 1;
+  outline: 1px solid red;
+  width: auto;
+  height: auto;
+  display: inline;
+  padding: 0px;
+}
+#afterTitle > div:nth-child(2) {
+  height: auto;
+  padding: 0px 1px;
+  position: relative;
+  left: -304px;
+  top: 1px;
+  outline: 1px solid red;
+}
+#afterTitle h1 {
+  font-weight: 700;
+  font-size: 72px;
+  width: 50%;
+  margin: 0px;
+}
+#afterTitle h2 {
+  margin: 0px;
+  margin-top: 117px;
+  font-size: 32px;
+  font-weight: 500;
+}
+#middle {
+  width: 78%;
+  margin: auto;
+  outline: 1px solid red;
+
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 32px 40px;
+}
+#middle > #list {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(9, 30, 66, 0.1);
+  margin-left: -40px;
+  margin-right: -40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 55px;
+}
+#middle ul {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+}
+#middle li {
+  display: inline;
+  margin: 0px;
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+  margin-right: 32px;
+  padding: 14px 0;
+  border-bottom: 4px solid transparent;
+  outline: none;
+  text-transform: capitalize;
+  color: #1a202c;
+  cursor: pointer;
+}
+#middle .selected {
+  color: #f23e36;
+  border-color: #f23e36;
+}
+#middle > #items {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 316px 316px 316px;
+  grid-auto-rows: 250px;
+  grid-column-gap: 54px;
+  grid-row-gap: 45px;
+  transition: transform 0.4s ease-in-out;
+  /* transition: opacity 0.1s; */
+}
+#items > div {
+  outline: 1px solid red;
+  border-radius: 6px;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  transform: translateY(0%) translateZ(0px);
+  box-sizing: border-box;
+  padding: 16px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+}
+#items > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 2px rgb(45 45 45 / 3%), 0 4px 4px rgb(49 49 49 / 3%),
+    0 8px 8px rgb(42 42 42 / 3%), 0 16px 16px rgb(32 32 32 / 3%),
+    0 32px 32px rgb(49 49 49 / 3%), 0 64px 64px rgb(35 35 35 / 3%);
+}
+#items .time {
+  color: #dfe1e6;
+  text-align: end;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 120%;
+}
+/* #items .videoTitle {
+  margin-bottom: 16px;
+} */
+#items p {
+  margin: 0px;
+  font-size: 16px;
+  line-height: 120%;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+#items h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0;
+  margin-bottom: 16px;
+}
+.views {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 120%;
+  color: #dfe1e6;
+}
+
+#item1 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item1.png");
+  opacity: 1;
+}
+#item2 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item2.png");
+  opacity: 1;
+}
+#item3 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item3.png");
+  opacity: 1;
+}
+#item4 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item4.png");
+  opacity: 1;
+}
+#item5 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item5.png");
+  opacity: 1;
+}
+#item6 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item6.png");
+  opacity: 1;
+}
+#item7 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item7.png");
+  opacity: 1;
+}
+#item8 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item8.png");
+  opacity: 1;
+  background-size: cover;
+}
+#item9 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item9.png");
+  opacity: 1;
+}
+#item10 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item10.png");
+  opacity: 1;
+}
+#item11 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item11.png");
+  opacity: 1;
+}
+#item12 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item12.png");
+  opacity: 1;
+}
+#item13 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item13.png");
+  opacity: 1;
+}
+#item14 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item14.png");
+  opacity: 1;
+}
+#item15 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item15.png");
+  opacity: 1;
+}
+#item16 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item16.png");
+  opacity: 1;
+}
+#item17 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item17.png");
+  opacity: 1;
+}
+#item18 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item18.png");
+  opacity: 1;
+}
+#item19 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item19.png");
+  opacity: 1;
+}
+#item20 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item20.png");
+  opacity: 1;
+}
+#item21 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item21.png");
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#item22 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item22.png");
+  opacity: 1;
+}
+#item23 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item23.png");
+  opacity: 1;
+}
+#item24 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/git%20upgrad/upGrad/img/shortvideo/item24.png");
+  opacity: 1;
+}
+/* @keyframes start {
+  0% {
+    transform: translateY(35px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+} */
