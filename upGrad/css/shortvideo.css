@@ -26,6 +26,8 @@ body {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   letter-spacing: -1px;
+  cursor: pointer;
+  text-decoration: none;
 }
 #title div {
   display: flex;
@@ -33,7 +35,7 @@ body {
   justify-content: center;
 }
 #title > div {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   display: flex;
   justify-content: flex-start;
   margin-left: 110px;
@@ -61,7 +63,7 @@ body {
   position: relative;
   left: 748px;
   z-index: 1;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   width: auto;
   height: auto;
   display: inline;
@@ -73,7 +75,7 @@ body {
   position: relative;
   left: -304px;
   top: 1px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 #afterTitle h1 {
   font-weight: 700;
@@ -90,7 +92,7 @@ body {
 #middle {
   width: 78%;
   margin: auto;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 
   background: #fff;
   border-radius: 10px;
@@ -144,7 +146,7 @@ body {
   /* transition: opacity 0.1s; */
 }
 #items > div {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   border-radius: 6px;
   position: relative;
   transition: 0.2s ease-in-out;
@@ -423,3 +425,27 @@ body {
     opacity: 1;
   }
 } */
+#footer {
+  background: #071936;
+  padding: 35px;
+  color: #7f8a9d;
+  display: flex;
+  justify-content: center;
+}
+#footer > div {
+  display: flex;
+}
+#footer > div > div:nth-child(2) {
+  font-size: 14px;
+  margin-top: 7px;
+  margin-left: 30px;
+}
+#footer #logofooter {
+  color: rgb(233, 84, 84);
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -1px;
+  cursor: pointer;
+  text-decoration: none;
+}
