@@ -111,11 +111,14 @@ body {
   padding-left: 40px;
   padding-right: 40px;
   height: 55px;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 #middle ul {
   padding: 0px;
   margin: 0px;
   display: block;
+  min-width: 700px;
 }
 #middle li {
   display: inline;
@@ -144,6 +147,19 @@ body {
   grid-row-gap: 45px;
   transition: transform 0.4s ease-in-out;
   /* transition: opacity 0.1s; */
+}
+@media only screen and (max-width: 768px) {
+  #middle {
+    width: 98%;
+    padding: 32px 20px;
+  }
+  #middle > #items {
+    grid-template-columns: 45% 45%;
+    grid-gap: 8px;
+  }
+  .mobileHidden {
+    display: none !important;
+  }
 }
 #items > div {
   /* outline: 1px solid red; */
