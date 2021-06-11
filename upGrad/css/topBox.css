@@ -733,7 +733,12 @@ body {
   padding: 106px 64px;
   border-radius: 24px;
   overflow: hidden;
-  background: linear-gradient(90deg, #000 0, rgba(0, 0, 0, 0.6) 45.83%, rgba(0, 0, 0, 0) 82.34%);
+  background: linear-gradient(
+    90deg,
+    #000 0,
+    rgba(0, 0, 0, 0.6) 45.83%,
+    rgba(0, 0, 0, 0) 82.34%
+  );
   box-sizing: border-box;
 }
 #afterTopBox img {
@@ -856,7 +861,8 @@ p {
   min-width: 120px;
   height: 96px;
 
-  box-shadow: 0 4px 16px rgba(189, 189, 189, 0.24), 0 4px 16px rgba(189, 189, 189, 0.24);
+  box-shadow: 0 4px 16px rgba(189, 189, 189, 0.24),
+    0 4px 16px rgba(189, 189, 189, 0.24);
 }
 .iconImg {
   background-image: url("https://ik.imagekit.io/upgrad1/marketing-platform-assets/sprites/prod/in/home/1622185958079/sprite-in/home.png");
@@ -902,10 +908,15 @@ p {
 .icon11 {
   background-position: 0 -696px;
 }
+#topBox {
+  width: 100%;
+  overflow: hidden;
+}
 #footerContainer {
   box-sizing: border-box;
   background-color: rgba(21, 28, 42, 0.87);
-  height: 1740px;
+  height: 100%;
+  overflow: hidden;
 }
 #footer {
   display: flex;
@@ -915,11 +926,24 @@ p {
   padding: 60px 107px;
   background-color: rgba(21, 28, 42, -2.13);
   color: #fff;
+  justify-content: space-between;
   box-sizing: border-box;
+}
+@media only screen and (max-width: 768px) {
+  #footer {
+    padding: 60px 0px;
+  }
+  #footer > div:nth-child(2) {
+    flex-direction: column !important;
+  }
+  #footerLast {
+    padding: 30px 0px !important;
+  }
 }
 #footer > div {
   height: 100%;
   /* border: 1px solid red; */
+  margin: 0px 20px;
 }
 #footer > div:nth-child(1) {
   width: 200px;
@@ -956,9 +980,9 @@ p {
   height: 100%;
   opacity: 0.8;
 }
-#footer > div:nth-child(2) {
+/* #footer > div:nth-child(2) {
   margin-left: 205px;
-}
+} */
 .footerListTopic {
   font-size: 13px;
   font-weight: 600;
@@ -986,14 +1010,21 @@ p {
 .footerList:hover {
   opacity: 1;
 }
+#footer > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+}
+#footer > div:nth-child(2) > div {
+  margin-bottom: 30px;
+}
 #footer > div:nth-child(3) {
   margin-left: 15px;
 }
-#footer > div:nth-child(4) {
+/* #footer > div:nth-child(3) {
   position: relative;
   right: -227px;
-}
-#footer > div:nth-child(4) > div {
+} */
+#footer > div:nth-child(3) > div {
   display: flex;
   flex-direction: row;
   border: 1px solid #fff;
@@ -1009,7 +1040,7 @@ p {
   letter-spacing: -0.5px;
   color: #fff;
 }
-#footer > div:nth-child(4) #androidApp {
+#footer > div:nth-child(3) #androidApp {
   transform: scale(0.5);
   width: 45px;
   height: 45px;
@@ -1017,7 +1048,7 @@ p {
   background-image: url(https://ik.imagekit.io/upgrad1/marketing-platform-assets/sprites/prod/global-configs/1622222636786/sprite-global-configs.png);
   margin-left: -30px;
 }
-#footer > div:nth-child(4) #iosApp {
+#footer > div:nth-child(3) #iosApp {
   transform: scale(0.5);
   width: 35px;
   height: 40px;
@@ -1033,22 +1064,33 @@ p {
 #footerLast {
   padding: 30px 60px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  /* width: 1140px; */
+  box-sizing: border-box;
 }
 #footerLast > div {
   /* border: 1px solid red; */
   width: 240px;
   overflow: hidden;
+  margin-left: 15px;
 }
+/* @media only screen and (max-width: 768px) {
+  #footerLast > :nth-child(2n) {
+    display: none;
+  }
+} */
 #footerLastBottom {
   padding: 30px 60px;
   display: flex;
   justify-content: space-evenly;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 #footerLastBottom > div {
   /* border: 1px solid red; */
   width: 240px;
   overflow: hidden;
+  margin-left: 15px;
 }
 #footerContainer #last {
   width: 85%;
