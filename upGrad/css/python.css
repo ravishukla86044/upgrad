@@ -1,0 +1,234 @@
+body * {
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+
+  transition: 0.2s cubic-bezier(0.2, 0.2, 0.38, 0.9);
+}
+body {
+  margin: 0px;
+  color: #091e42;
+}
+.container {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+#header {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 2px 6px #dfe1e6;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 14;
+  margin: 0 auto;
+}
+#nav {
+  margin: 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  transition: translateY 0.2s ease-in-out !important;
+}
+#nav > a {
+  text-decoration: none;
+  font-size: 23px;
+  color: rgb(238, 44, 60);
+  font-weight: 900;
+  margin: 15px 0px;
+}
+#nav > a > p {
+  text-decoration: none;
+  font-size: 11px;
+  color: #091e42;
+  font-weight: 400;
+  margin: 4px 0px;
+}
+#nav > ul {
+  padding-left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-weight: 600;
+  font-size: 17px;
+  color: #151a23;
+  margin: 0px;
+}
+#nav > ul:nth-child(2) > li {
+  margin-right: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+#nav > ul:nth-child(2) > li > a {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  height: 30px;
+  position: relative;
+}
+#nav > ul:nth-child(2) > li:hover {
+  background: #ebf2ff;
+  border-radius: 30px;
+  transform: translateY(-8%) !important;
+  text-decoration: underline;
+}
+#nav > ul:nth-child(2) > li > a > :nth-child(n) {
+  margin-right: 10px;
+}
+#nav > ul:nth-child(2) > li > a > span {
+  color: #4f8afb;
+}
+#nav > ul:nth-child(3) {
+  color: #7c8698;
+}
+#nav > ul:nth-child(3) > li {
+  max-width: 250px;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  display: flex;
+  cursor: pointer;
+}
+#nav > ul:nth-child(3) > li:nth-child(3) > div {
+  background-color: #e32525;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #b99090;
+}
+#afterHeader {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+  background-color: #f4f5f7;
+}
+#afterHeader > div {
+  width: 1125px;
+  margin: 60px auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+#left {
+  width: 380px;
+}
+#right {
+  margin-left: auto;
+  width: 648px;
+}
+#left .course {
+  margin-bottom: 40px;
+  padding-left: 24px;
+}
+#left .courseButton {
+  background: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  width: max-content;
+  z-index: 1;
+  position: relative;
+  border-radius: 32px;
+  box-shadow: 0 3px 6px rgb(9 30 66 / 3%), 0 2px 4px rgb(9 30 66 / 8%);
+  padding: 2px 16px;
+  height: 32px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  letter-spacing: -0.00533333em;
+}
+.courseButton > span {
+  font-size: 27px;
+  color: #7c8698;
+  margin-left: 5px;
+}
+.courseHeading {
+  color: #1a202c;
+  margin-top: 20px;
+}
+.courseHeading .title {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.0107em;
+  margin-bottom: 15px;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.progressHeading {
+  font-size: 13px;
+  color: rgb(113, 122, 137);
+}
+.progressBar > progress {
+  height: 8px;
+
+  margin-top: 6px;
+  width: 100%;
+}
+.mobileHidden h4 {
+  font-size: 14px;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #5d6779;
+  margin-bottom: 6px;
+  margin-left: 12px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+#mobileHidden > div {
+  width: 376px;
+  align-items: center;
+  padding: 8px 20px 8px 0;
+  margin-bottom: 6px;
+  cursor: pointer;
+  display: flex;
+  width: 350px;
+  align-items: center;
+  padding: 8px 20px;
+  margin-bottom: 6px;
+  justify-content: space-between;
+}
+#mobileHidden > div:hover {
+  box-shadow: 0 0 0 1px #7c8698;
+  border-radius: 8px;
+}
+#mobileHidden .current {
+  background: #fff;
+  box-shadow: 0 3px 6px rgb(9 30 66 / 3%), 0 2px 4px rgb(9 30 66 / 8%);
+  border-radius: 10px;
+}
+.current .name > div:nth-child(1) {
+  font-weight: 600;
+}
+#mobileHidden > div > span {
+  color: #7c8698;
+}
+#mobileHidden > div > span.green {
+  color: rgb(34, 175, 115);
+}
+.name > div:nth-child(1) {
+  font-size: 15px;
+  line-height: 27px;
+  letter-spacing: -0.00533333em;
+  color: #1a202c;
+}
+.name > div:nth-child(2) {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: -0.00466667em;
+  color: #7c8698;
+  font-weight: 500;
+}
