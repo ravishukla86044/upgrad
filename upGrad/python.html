@@ -76,7 +76,7 @@
           <div class="mobileHidden">
             <h4>Modules Overview</h4>
             <div id="mobileHidden">
-              <div class="current">
+              <div class="current" onclick="moveTo(1)">
                 <span class="material-icons green"> play_circle </span>
                 <div class="name">
                   <div>Learn Basic Python Programming</div>
@@ -84,7 +84,7 @@
                 </div>
                 <span class="material-icons"> navigate_next </span>
               </div>
-              <div>
+              <div onclick="moveTo(2)">
                 <span class="material-icons-outlined"> import_contacts </span>
                 <div class="name">
                   <div>Industry Immersion</div>
@@ -92,7 +92,7 @@
                 </div>
                 <span class="material-icons"> navigate_next </span>
               </div>
-              <div>
+              <div onclick="moveTo(3)">
                 <span class="material-icons-outlined"> import_contacts </span>
                 <div class="name">
                   <div>Platform & Support</div>
@@ -100,7 +100,7 @@
                 </div>
                 <span class="material-icons"> navigate_next </span>
               </div>
-              <div>
+              <div onclick="moveTo(4)">
                 <span class="material-icons-outlined"> import_contacts </span>
                 <div class="name">
                   <div>Career Services</div>
@@ -111,8 +111,541 @@
             </div>
           </div>
         </div>
-        <div id="right"></div>
+        <div id="right">
+          <div>
+            <div id="1" class="selected" onclick="expand(event)">
+              <div class="heading">
+                <div>
+                  <h5>Module 1</h5>
+                  <h2>Learn Basic Python Programming</h2>
+                </div>
+                <div>
+                  <p>Expand</p>
+                  <span class="material-icons"> expand_more </span>
+                </div>
+              </div>
+              <div class="date">
+                <div>Due Date: Sep 30, 2021 (11 PM)</div>
+                <div>Submissions: nil</div>
+              </div>
+              <div class="progress">
+                <div>
+                  <span class="material-icons green"> play_circle </span>
+                  <p>Continue Learning</p>
+                </div>
+                <div>
+                  <div class="">
+                    <p>1% Complete</p>
+                    <p>
+                      13 hrs 20 mins left
+                      <span class="material-icons"> error_outline </span>
+                    </p>
+                  </div>
+                  <progress value="1" max="100">1 %</progress>
+                </div>
+              </div>
+              <div class="expandMore">
+                <div class="button active" onclick="expandMore(event)">
+                  <div class="title">Basic Coding</div>
+                  <div>
+                    <div class="page">15 Pages</div>
+                    <div class="time">4h 50m</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">Welcome to upStart</div>
+                    <span class="material-icons"> play_circle </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Course Structure</div>
+                    <span class="material-icons"> play_circle </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Session Overview</div>
+                    <span class="material-icons"> check </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Session Overview</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Basic Refresher</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">
+                      Real Life Scenarios of Programming - I
+                    </div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">
+                      Real Life Scenarios of Programming - II
+                    </div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Swapping</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Even Or Odd</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Alarm Clock</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Factorial</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Reverse The Digits</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">How Many Chocolates?</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Print The Pattern</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Practice Questions</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Graded Questions</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+                <div class="button" onclick="expandMore(event)">
+                  <div class="title">Lists</div>
+                  <div>
+                    <div class="page">9 Pages</div>
+                    <div class="time">3h 5m</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">Session Overview</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Refresher</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Smallest Element</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Above Average</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Recruit New Members</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Calendar</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Fenced Matrix</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Practice Questions</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Graded Questions</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+                <div class="button" onclick="expandMore(event)">
+                  <div class="title">Strings</div>
+                  <div>
+                    <div class="page">9 Pages</div>
+                    <div class="time">2h 35m</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">Session Overview</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Refresher</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Palindrome String</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">No Spaces</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Move Vowels</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Calendar</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Common Prefix</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Anagrams</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Practice Questions</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Graded Questions</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+                <div class="button" onclick="expandMore(event)">
+                  <div class="title">Other Data Structures</div>
+                  <div>
+                    <div class="page">9 Pages</div>
+                    <div class="time">3h</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">Session Overview</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Refresher</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Remove Duplicates</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Dictionary And List</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">upGrad String</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Practice Questions - I</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Practice Questions - II</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Sajan's Anecdotes</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="2" onclick="expand(event)">
+              <div class="heading">
+                <div>
+                  <h5>Module 2</h5>
+                  <h2>Industry Immersion</h2>
+                </div>
+                <div>
+                  <p>Expand</p>
+                  <span class="material-icons"> expand_more </span>
+                </div>
+              </div>
+              <div class="date">
+                <div>Due Date: Sep 30, 2021 (11 PM)</div>
+                <div>Submissions: nil</div>
+              </div>
+              <div class="progress">
+                <div>
+                  <span class="material-icons green"> play_circle </span>
+                  <p>Continue Learning</p>
+                </div>
+                <div>
+                  <div class="">
+                    <p>Yet to start</p>
+                    <p>
+                      25 mins left
+                      <span class="material-icons"> error_outline </span>
+                    </p>
+                  </div>
+                  <progress value="0" max="100">0 %</progress>
+                </div>
+              </div>
+              <div class="expandMore">
+                <div class="button active" onclick="expandMore(event)">
+                  <div class="title">
+                    Expert Faculty Members
+                    <div>Optional</div>
+                  </div>
+                  <div>
+                    <div class="page">1 Pages</div>
+                    <div class="time">5m</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">Xpert Profile</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+                <div class="button" onclick="expandMore(event)">
+                  <div class="title">
+                    Industry Projects
+                    <div>Optional</div>
+                  </div>
+                  <div>
+                    <div class="page">1 Pages</div>
+                    <div class="time">10m</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">Projects</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+                <div class="button" onclick="expandMore(event)">
+                  <div class="title">
+                    Small Group Coaching
+                    <div>Optional</div>
+                  </div>
+                  <div>
+                    <div class="page">1 Pages</div>
+                    <div class="time">10m</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">Small Group Coaching</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="3" onclick="expand(event)">
+              <div class="heading">
+                <div>
+                  <h5>Module 3</h5>
+                  <h2>Platform & Support</h2>
+                </div>
+                <div>
+                  <p>Expand</p>
+                  <span class="material-icons"> expand_more </span>
+                </div>
+              </div>
+              <div class="date">
+                <div>Due Date: Sep 30, 2021 (11 PM)</div>
+                <div>Submissions: nil</div>
+              </div>
+              <div class="progress">
+                <div>
+                  <span class="material-icons green"> play_circle </span>
+                  <p>Continue Learning</p>
+                </div>
+                <div>
+                  <div class="">
+                    <p>Yet to start</p>
+                    <p>
+                      30 mins left
+                      <span class="material-icons"> error_outline </span>
+                    </p>
+                  </div>
+                  <progress value="0" max="100">0 %</progress>
+                </div>
+              </div>
+              <div class="expandMore">
+                <div class="button active" onclick="expandMore(event)">
+                  <div class="title">
+                    Learning Platform
+                    <div>Optional</div>
+                  </div>
+                  <div>
+                    <div class="page">4 Pages</div>
+                    <div class="time">30m</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">360 degree learning experience</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">About our Platform</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Student Mentors</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Peer Interaction</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="4" onclick="expand(event)">
+              <div class="heading">
+                <div>
+                  <h5>Module 4</h5>
+                  <h2>Career Services</h2>
+                </div>
+                <div>
+                  <p>Expand</p>
+                  <span class="material-icons"> expand_more </span>
+                </div>
+              </div>
+              <div class="date">
+                <div>Due Date: Sep 30, 2021 (11 PM)</div>
+                <div>Submissions: nil</div>
+              </div>
+              <div class="progress">
+                <div>
+                  <span class="material-icons green"> play_circle </span>
+                  <p>Continue Learning</p>
+                </div>
+                <div>
+                  <div class="">
+                    <p>Yet to start</p>
+                    <p>
+                      55 mins left
+                      <span class="material-icons"> error_outline </span>
+                    </p>
+                  </div>
+                  <progress value="0" max="100">0 %</progress>
+                </div>
+              </div>
+              <div class="expandMore">
+                <div class="button active" onclick="expandMore(event)">
+                  <div class="title">
+                    Personlized Impact
+                    <div>Optional</div>
+                  </div>
+                  <div>
+                    <div class="page">1 Pages</div>
+                    <div class="time">5m</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">Succeding with upGrad</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+                <div class="button" onclick="expandMore(event)">
+                  <div class="title">
+                    Career Mentorship
+                    <div>Optional</div>
+                  </div>
+                  <div>
+                    <div class="page">4 Pages</div>
+                    <div class="time">30m</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">Career Coach & Industry Mentor</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">
+                      Examples of Personalized Industry Mentorship
+                    </div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Career Transition</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Industry Immersion Certificate</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+                <div class="button" onclick="expandMore(event)">
+                  <div class="title">
+                    Career Center & Alumini Benifits
+                    <div>Optional</div>
+                  </div>
+                  <div>
+                    <div class="page">2 Pages</div>
+                    <div class="time">20m</div>
+                    <span class="material-icons"> add </span>
+                  </div>
+                </div>
+                <div class="moreContent">
+                  <div class="button">
+                    <div class="title">Career Centre & Hiring Initiatives</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                  <div class="button">
+                    <div class="title">Alumni Network & Benefits</div>
+                    <span class="material-icons"> lock </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
 </html>
+<script>
+  function expand(e) {
+    let a = e.currentTarget;
+    let b = a.querySelector(".expandMore");
+    b.classList.toggle("display");
+
+    let c = a.querySelector(".heading p");
+    if (c.innerHTML == "Expand") {
+      c.innerHTML = "Collapse";
+    } else {
+      c.innerHTML = "Expand";
+    }
+
+    let d = a.querySelector(".heading span");
+    d.classList.toggle("rotate");
+  }
+
+  function moveTo(e) {
+    window.location.href = `#${e}`;
+    //console.log("");
+  }
+
+  function expandMore(e) {
+    e.stopPropagation();
+    let a = e.currentTarget;
+    let b = a.nextElementSibling;
+    b.classList.toggle("displayOfMoreContent");
+  }
+</script>

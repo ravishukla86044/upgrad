@@ -1,12 +1,13 @@
 body * {
   font-family: "Montserrat", sans-serif;
   margin: 0px;
-
+  scroll-behavior: smooth;
   transition: 0.2s cubic-bezier(0.2, 0.2, 0.38, 0.9);
 }
 body {
   margin: 0px;
   color: #091e42;
+  scroll-behavior: smooth;
 }
 .container {
   box-sizing: border-box;
@@ -20,7 +21,7 @@ body {
   background: #fff;
   box-shadow: 0 2px 6px #dfe1e6;
   position: fixed;
-  top: 0;
+  top: 0px;
   align-items: center;
   justify-content: center;
   z-index: 14;
@@ -121,11 +122,11 @@ body {
 }
 #left {
   width: 380px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
 }
-#right {
-  margin-left: auto;
-  width: 648px;
-}
+
 #left .course {
   margin-bottom: 40px;
   padding-left: 24px;
@@ -231,4 +232,225 @@ body {
   letter-spacing: -0.00466667em;
   color: #7c8698;
   font-weight: 500;
+}
+#right {
+  margin-left: auto;
+  width: 648px;
+}
+#right > div > div {
+  background: #fff;
+  box-shadow: 0 3px 6px rgb(9 30 66 / 3%), 0 2px 4px rgb(9 30 66 / 8%);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  padding: 16px 16px 16px 24px;
+  outline: 0;
+}
+
+#right div.selected {
+  box-shadow: 0 0 0 2px #02a971, 0 2px 6px rgb(9 30 66 / 4%),
+    0 8px 12px rgb(9 30 66 / 8%);
+}
+#right .heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+#right .heading h5 {
+  font-size: 15px;
+  line-height: 27px;
+  color: #7c8698;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  font-weight: 500;
+}
+#right .heading h2 {
+  font-size: 22px;
+  line-height: 36px;
+  color: #1a202c;
+  font-weight: 600;
+}
+#right .heading > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#right .heading > div:nth-child(2) > p {
+  font-size: 15px;
+  line-height: 27px;
+  color: #7c8698;
+  font-weight: 400;
+}
+#right .heading > div:nth-child(2) > span {
+  width: 44px;
+  height: 44px;
+  background: rgba(223, 225, 230, 0.5);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+}
+#right .heading > div:nth-child(2) > span.rotate {
+  transform: rotate(180deg);
+}
+#right .date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+#right .date > :nth-child(n) {
+  border: 1px solid #b4bac4;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin-right: 8px;
+  height: 30px;
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+#right .progress {
+  display: flex;
+}
+#right .progress > div:nth-child(1) {
+  display: none;
+  padding: 10px 16px;
+  font-size: 17px;
+  line-height: 30px;
+  margin-right: 36px;
+  border: 1px solid #dfe1e6;
+  color: #4a5568;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: none;
+  font-weight: 600;
+
+  justify-content: space-between;
+  border: none;
+  color: #fff;
+  width: 200px;
+  background-color: #02a971;
+  box-shadow: 0 3px 6px rgb(9 30 66 / 3%), 0 2px 4px rgb(9 30 66 / 8%);
+}
+#right div.selected .progress > div:nth-child(1) {
+  display: flex;
+}
+#right .progress > div:nth-child(1) > span {
+  margin-top: 2px;
+}
+#right .progress > div:nth-child(2) {
+  margin-top: 2px;
+  flex: 1 1;
+}
+#right .progress > div:nth-child(2) > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#right .progress > div:nth-child(2) p {
+  font-size: 14px;
+  line-height: 27px;
+  color: #4a5568;
+}
+#right .progress > div:nth-child(2) p:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#right .progress > div:nth-child(2) p > span {
+  font-size: 17px;
+  color: rgb(113, 122, 137);
+  margin-left: 4px;
+}
+#right .progress > div:nth-child(2) progress {
+  width: 100%;
+  color: rgb(113, 122, 137);
+}
+.expandMore {
+  display: none;
+  flex-flow: column;
+  margin-top: 40px;
+}
+.display {
+  display: flex !important;
+}
+.expandMore .button {
+  padding: 5px 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  align-items: center;
+}
+.expandMore .button:hover {
+  background: #f4f5f7;
+  box-shadow: 0 0 0 1px #7c8698;
+}
+.expandMore .button.active {
+  background-color: rgba(204, 238, 227, 0.64);
+  box-shadow: none;
+}
+.expandMore .button .title {
+  color: #1a202c;
+  font-size: 14px;
+  line-height: 27px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.expandMore .button > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  color: #7c8698;
+  width: 180px;
+}
+.expandMore .button > div:nth-child(2) .page {
+  font-size: 13px;
+}
+.expandMore .button > div:nth-child(2) .time {
+  color: #4a5568;
+  font-size: 14px;
+
+  text-align: right;
+}
+.expandMore .button > div:nth-child(2) span {
+  color: #7c8698;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.expandMore .moreContent .button {
+  margin-left: 25px;
+}
+.expandMore .moreContent .button span {
+  width: fit-content;
+  color: #7c8698;
+}
+.expandMore .moreContent {
+  display: none;
+  flex-direction: column;
+}
+.expandMore .moreContent.displayOfMoreContent {
+  display: flex;
+}
+.expandMore .title > div {
+  color: #b64f97 !important;
+  border-color: #b64f97;
+  width: 85px;
+  box-sizing: border-box;
+  flex: none;
+  font-size: 14px;
+  line-height: 24px;
+  border: 1px solid #7c8698;
+  border-radius: 12px;
+  padding: 0 10px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
 }
