@@ -45,7 +45,37 @@
           <li>
             <span class="material-icons-outlined"> notifications_none </span>
           </li>
-          <li><div>R</div></li>
+          <li>
+            <div onclick="popUp()">R</div>
+            <div id="popUp">
+              <ul>
+                <li>
+                  <span class="material-icons-outlined"> account_circle </span>
+                  <p>My Profile</p>
+                </li>
+                <li>
+                  <span class="material-icons-outlined"> swap_horiz </span>
+                  <p>Switch Program</p>
+                </li>
+                <li>
+                  <span class="material-icons"> turned_in_not </span>
+                  <p>Followed Questions</p>
+                </li>
+                <li>
+                  <span class="material-icons"> settings </span>
+                  <p>Account Settings</p>
+                </li>
+                <li>
+                  <span class="material-icons"> help_outline </span>
+                  <p>Help & Support</p>
+                </li>
+                <li class="log">
+                  <span class="material-icons"> logout</span>
+                  <p>Logout</p>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -647,5 +677,10 @@
     let a = e.currentTarget;
     let b = a.nextElementSibling;
     b.classList.toggle("displayOfMoreContent");
+  }
+
+  function popUp() {
+    let a = document.getElementById("popUp");
+    a.classList.toggle("display");
   }
 </script>
