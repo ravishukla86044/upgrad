@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body{
+      /* background-color:greenyellow; */
+    }
+  p, div, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: 0 0;
+}
+  *, :after, :before {
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.popup_box {
+  width: 777px;
+    height: 400px;
+    animation-duration: 300ms;
+    text-align: start;
+/* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 101;
+    padding: 0;
+    /* width: 100%;
+    height: 90%; */
+    background: #fff;
+    border-radius: 4px;
+    /* text-align: center; */
+    /* -webkit-box-shadow: 0 20px 55px rgb(0 0 0 / 35%); */
+    box-shadow: 0 20px 55px rgb(0 0 0 / 35%);
+}
+.popupComponent {
+    display: flex;
+    height: 440px;
+
+}
+.popupComponent_left {
+  background: #fff;
+    width: 337px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+.popupComponent_left_img {
+  width: auto;
+  height: 189px;
+  max-width: 100%;
+
+}
+.popupComponent_right{
+    background: #fff;
+    padding: 32px 44px;
+    max-width: 440px;
+    height: 440px;
+    display: flex;
+    box-shadow: 0 2px 85px 9px rgb(154 153 153 / 6%);
+    flex-direction: column;
+}
+.popupComponent_right_heading_part{
+    margin-bottom: 25px;
+
+}
+.popupComponent_right_heading{
+    margin: 10px 0;
+    font-weight: 700;
+    font-size: 24px;
+    color: #293030;
+
+
+}
+.popupComponent_right_heading_part_backarrow > svg{
+    width: 20px;
+    height: 16px;
+    color: #000;
+    cursor: pointer;
+    margin: 10px 0;
+    max-width: 100%;
+}
+.popupComponent_right_afterheading{
+    font-weight: 600;
+    font-size: 18px;
+    color: #546e7a;
+    display: flex;
+    align-items: baseline;
+
+}
+.popupComponent_right_afterheading_edit{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #e95454;
+    padding-left: 7px;
+    cursor: pointer;
+}
+.popupComponent_right_afterheading_edit > svg {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+.popupComponent_right_belowspace{
+  width: 90%;
+    height: auto;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 138%;
+    color: #546e7a;
+}
+.popupComponent_right_belowpart{
+  margin-top: 40px;
+}
+.popupComponent_otp_right_belowpart_form {
+  margin: 10px 0 35px;
+
+}
+.popupComponent_otp_right_belowpart_form_div1{
+  display: flex;
+  color: #dfe1e6;
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: 26px;
+    font-family: inherit;
+
+}
+.otp_div1_digit1{
+  display: flex;
+    align-items: center;
+
+}
+.otp_div1_digit1_input{
+  width: 1em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 100%;
+    color: #263238;
+    border: none;
+    border-bottom: 1px solid #dfe1e6;
+    margin: 0 3px;
+    font-family: inherit;
+
+}
+.resend_otp_div1{
+  padding: 15px 0;
+    display: flex;
+    font-size: 14px;
+    line-height: 100%;
+    color: #b3b3b3;
+}
+.resend_otp_span1{
+  font-weight: 600;
+    font-size: 16px;
+    color: #4f8afb;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.popupComponent_right_belowpart_form_div1 {
+  width: 379px;
+    padding-left: 49px;
+}
+.popupComponent_right_belowpart_form_div2{
+  position: relative;
+    display: flex;
+    align-items: baseline;
+    max-height: 24px;
+}
+.popupComponent_right_belowpart_form_div3 {
+  display: flex;
+    align-items: baseline;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.popupComponent_right_belowpart_form_div3_1{
+  width: 24px;
+    height: 24px;
+    padding: 10px;
+    margin-right: 10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAANlBMVEUSiAdgmCtwcL14eMB5ecB9fcOAgMWJicmSksyTk8yTk82UlM2vr9q/v+Hg4PH/mTP/u3f///+1rU14AAAARklEQVQoz9XOMRKAIAxE0RhQBJMF7n9ZW1Kwtb4yf2Yn0in5cB6UzJXlbOEQsj3A7duc0AqU5HKRbBU49+PTVT2+dlDyWy8zUxeIwBMVGgAAAABJRU5ErkJggg==);
+    position: relative;
+    display: inline-block;
+    line-height: 1em;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.popupComponent_right_belowpart_form_div3_1::before{
+  content: " ";
+}
+.popupComponent_right_belowpart_form_p{
+  font-weight: 700;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: .03em;
+  /* margin-top: 0px; */
+}
+#num_svg{
+  width: auto;
+  cursor: pointer;
+    padding: 0 10px;
+    transition: all .5s ease;
+    transform: rotate(180deg);
+    max-width: 100%;
+    height: auto;
+}
+.popup_right_input{
+  outline: none;
+    border: none;
+    width: 200px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: .12em;
+    color: #091e42;
+    font-family: inherit;
+
+}
+button, input, label, select, textarea {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: 0 0;
+    font-size: 100%;
+    line-height: 100%;
+}
+.popupComponent_right_belowpart_form_belowspace{
+  margin-top: 15px;
+}
+/* .popupComponent_right_belowpart_form_belowspace_span{
+  font-weight: 600;
+    font-size: 16px;
+    line-height: 138%;
+    color: #e32525;
+    padding-top: 8px;
+    overflow: hidden;
+    font-style: inherit;
+} */
+.popupComponent_right_belowpart_form_button_div{
+   width: 379px;
+    padding-left: 49px;
+    background-color: #e0e1e2;
+
+}
+.popupComponent_right_belowpart_form_button{
+ 
+ 
+  background: #e0e1e2;
+    opacity: .6;
+    text-transform: uppercase;
+    width: 344px;
+    height: 40px;
+    /* background: linear-gradient(
+270deg
+,#ff5757,#d02035); */
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    transition: background .8s;
+    margin: 10px 0;
+    font-family: inherit;
+    cursor: pointer;
+
+}
+.popup_button_span1{
+  color: inherit;
+  font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.popup_otp_lastline{
+  font-weight: 700;
+    font-size: 14px;
+    /* -webkit-text-decoration-line: underline; */
+    text-decoration-line: underline;
+    color: #7c8698;
+    padding-left: 5px;
+    cursor: pointer;
+    opacity: .8;
+    text-align: center;
+    margin-top: 10px;
+}
+button, input[type=button], input[type=reset], input[type=submit] {
+    overflow: visible;
+    /* width: auto; */
+    box-sizing: border-box;
+}
+
+#arrow_svg{
+  width: 17;
+    height: 14;
+    fill: currentcolor;
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+  
+
+  <!-- <div> -->
+    <!-- <div class="popup_div1">
+
+      <span class="popup_div1_span"></span> -->
+      <!-- <div class="popup_div2"></div> -->
+      <div class="popup_box">
+        <div class="OTPauthModal">
+          <div class="popupComponent">
+            <div class="popupComponent_left">
+              <img src="img/popupImage.png" alt="" class="popupComponent_left_img">
+            </div>
+            <div class="popupComponent_right">
+              <!-- <div class="popupComponent_right_upspace"></div> -->
+
+              <div class="popupComponent_right_heading_part">
+                <div class="popupComponent_right_heading_part_backarrow">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.99986C0 8.19389 0.0830188 8.3792 0.221132 8.51873L7.69208 15.785C7.98717 16.072 8.4649 16.0713 8.75924 15.785C9.05434 15.4987 9.05434 15.0336 8.75924 14.7473L2.57585 8.73383L19.2453 8.73383C19.6619 8.73383 20 8.40536 20 7.99986C20 7.59437 19.6619 7.2659 19.2453 7.2659L2.5766 7.2659L8.75924 1.25247C9.05434 0.966146 9.05358 0.50106 8.75924 0.214741C8.46415 -0.071579 7.98641 -0.071579 7.69208 0.214741L0.221132 7.481C0.08 7.61835 0.00226415 7.80729 0 7.99986Z" fill="black"/>
+                        </svg>
+                        
+                </div>
+                <div class="popupComponent_right_heading">Enter the code sent to your phone and email</div>
+                <div class="popupComponent_right_afterheading">
+                    <p>We sent it to +919950644911
+                        <span class="popupComponent_right_afterheading_edit">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.50625 0.24375C9.18125 -0.08125 8.69375 -0.08125 8.36875 0.24375L0.24375 8.36875C0.08125 8.53125 0 8.69375 0 8.9375V12.1875C0 12.675 0.325 13 0.8125 13H4.0625C4.30625 13 4.46875 12.9187 4.63125 12.7562L12.7562 4.63125C13.0813 4.30625 13.0813 3.81875 12.7562 3.49375L9.50625 0.24375ZM3.7375 11.375H1.625V9.2625L6.5 4.3875L8.6125 6.5L3.7375 11.375ZM9.75 5.3625L7.6375 3.25L8.9375 1.95L11.05 4.0625L9.75 5.3625Z" fill="#E95454"/>
+                                </svg>
+                                Edit
+                        </span>
+                    </p>
+                </div>
+            
+            
+            </div>
+            <form class="popupComponent_otp_right_belowpart_form">
+              <div>
+                <div class="popupComponent_otp_right_belowpart_form_div1">
+                  <div class="otp_div1_digit1">
+                    <input type="tel" placeholder="0" class="otp_div1_digit1_input">
+                    <span>-</span>
+                  </div>
+                  <div class="otp_div1_digit1">
+                    <input type="tel" placeholder="0" class="otp_div1_digit1_input">
+                    <span>-</span>
+                  </div>
+                  <div class="otp_div1_digit1">
+                    <input type="tel" placeholder="0" class="otp_div1_digit1_input">
+                    <span>-</span>
+                  </div>
+                  <div class="otp_div1_digit1">
+                    <input type="tel" placeholder="0" class="otp_div1_digit1_input">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="resend_otp_div1">
+                <p>Didnt recieve OTP?</p>
+                <span class="resend_otp_span1">RESEND OTP</span>
+              </div>
+              
+              <!-- <div class="popupComponent_right_belowpart_form_button_div"> -->
+              <button onclick="addLocations(event)" class="popupComponent_right_belowpart_form_button" type="submit" >
+                <span class="popup_button_span1">
+                  <span>CONTINUE</span>
+                  <svg id="arrow_svg" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24"/><path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"/></svg>
+                </span>
+              </button>
+            <!-- </div> -->
+              <p class="popup_otp_lastline">Proceed with Email</p>
+            </form>
+
+</body>
+</html>
+<script>
+  function addLocations(e){
+    e.preventDefault()
+    console.log("dwedwe")
+    window.location.href = "popup_work.html"
+  }
+</script>

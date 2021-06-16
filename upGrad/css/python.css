@@ -9,6 +9,9 @@ body {
   color: #091e42;
   scroll-behavior: smooth;
 }
+a{
+  text-decoration: none;
+}
 .container {
   box-sizing: border-box;
   /* overflow: hidden; */

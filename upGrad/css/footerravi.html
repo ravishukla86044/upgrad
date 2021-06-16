@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #footerContainer {
+  box-sizing: border-box;
+  background-color: rgba(21, 28, 42, 0.87);
+  height: 100%;
+  overflow: hidden;
+}
+#footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 400px;
+  padding: 60px 107px;
+  background-color: rgba(21, 28, 42, -2.13);
+  color: #fff;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 768px) {
+  #footer {
+    padding: 60px 0px;
+  }
+  #footer > div:nth-child(2) {
+    flex-direction: column !important;
+  }
+  #footerLast {
+    padding: 30px 0px !important;
+  }
+}
+#footer > div {
+  height: 100%;
+  /* border: 1px solid red; */
+  margin: 0px 20px;
+}
+#footer > div:nth-child(1) {
+  width: 200px;
+}
+#footer > div:nth-child(1) > p:nth-child(1) {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 21px;
+  margin-top: 0px;
+  cursor: pointer;
+}
+#footer > div:nth-child(1) > p:nth-child(2) {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#footer .footerIcon {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+}
+#footer .footerIcon > div {
+  width: 20px;
+  height: 18px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#footer .footerIcon > div > img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+/* #footer > div:nth-child(2) {
+  margin-left: 205px;
+} */
+.footerListTopic {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+}
+#footerContainer ul {
+  margin-top: 25px;
+  padding: 0px;
+}
+.footerList {
+  font-size: 9px;
+  font-weight: 400;
+  display: block;
+  height: 15px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.9;
+  margin: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.footerList:hover {
+  opacity: 1;
+}
+#footer > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+}
+#footer > div:nth-child(2) > div {
+  margin-bottom: 30px;
+}
+#footer > div:nth-child(3) {
+  margin-left: 15px;
+}
+/* #footer > div:nth-child(3) {
+  position: relative;
+  right: -227px;
+} */
+#footer > div:nth-child(3) > div {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #fff;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 2px;
+  height: 33px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  width: 180px;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+#footer > div:nth-child(3) #androidApp {
+  transform: scale(0.5);
+  width: 45px;
+  height: 45px;
+  background-position: -562px -80px;
+  background-image: url(https://ik.imagekit.io/upgrad1/marketing-platform-assets/sprites/prod/global-configs/1622222636786/sprite-global-configs.png);
+  margin-left: -30px;
+}
+#footer > div:nth-child(3) #iosApp {
+  transform: scale(0.5);
+  width: 35px;
+  height: 40px;
+  background-position: -562px -130px;
+  background-image: url(https://ik.imagekit.io/upgrad1/marketing-platform-assets/sprites/prod/global-configs/1622222636786/sprite-global-configs.png);
+}
+#footerContainer hr {
+  width: 95%;
+  background: gray;
+  border: none;
+  height: 1px;
+}
+#footerLast {
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  /* width: 1140px; */
+  box-sizing: border-box;
+}
+#footerLast > div {
+  /* border: 1px solid red; */
+  width: 240px;
+  overflow: hidden;
+  margin-left: 15px;
+}
+/* @media only screen and (max-width: 768px) {
+  #footerLast > :nth-child(2n) {
+    display: none;
+  }
+} */
+#footerLastBottom {
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#footerLastBottom > div {
+  /* border: 1px solid red; */
+  width: 240px;
+  overflow: hidden;
+  margin-left: 15px;
+}
+#footerContainer #last {
+  width: 85%;
+  background: gray;
+  border: none;
+  height: 0.1px;
+  opacity: 0.3;
+}
+#lastLine {
+  opacity: 1;
+  margin: 21px 113px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="footerContainer">
+        <div id="footer">
+          <div>
+            <p>upGrad</p>
+            <p>Building Careers of Tomorrow</p>
+            <div class="footerIcon">
+              <div>
+                <img src="icon/facebook.png" alt="" class="src" />
+              </div>
+              <div>
+                <img src="icon/twitter_white.png" alt="" class="src" />
+              </div>
+              <div>
+                <img src="icon/linkedin.png" alt="" class="src" />
+              </div>
+              <div>
+                <img src="icon/youtube-logo.png" alt="" class="src" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div class="footerListTopic">UPGRAD</div>
+              <div>
+                <ul>
+                  <li class="footerList">About</li>
+                  <li class="footerList">Careers</li>
+                  <li class="footerList">Placement Support</li>
+                  <li class="footerList">upGrad Blog</li>
+                  <li class="footerList">Success Stories</li>
+                  <li class="footerList">For Teams</li>
+                  <li class="footerList">Data Science Programs for Teams</li>
+                  <li class="footerList">
+                    Product and Technology Programs for Teams
+                  </li>
+                  <li class="footerList">Management Programs for Teams</li>
+                  <li class="footerList">Online Power Learning</li>
+                  <li class="footerList">Xchange</li>
+                  <li class="footerList">BaseCamp</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="footerListTopic">Support</div>
+                <div>
+                  <ul>
+                    <li class="footerList">Contact</li>
+                    <li class="footerList">Terms and Conditions</li>
+                    <li class="footerList">Privacy Policy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div>
+            <div>
+              <div id="androidApp"></div>
+              <div>Get the android app</div>
+            </div>
+            <div>
+              <div id="iosApp"></div>
+              <div>Get the iOS app</div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="footerLast">
+          <div>
+            <div class="footerListTopic">Data Science</div>
+            <div>
+              <ul>
+                <li class="footerList">Data Science | Executive PG Programme</li>
+                <li class="footerList">Data Science | Master of Science</li>
+                <li class="footerList">
+                  Data Science for Business Decision Making | Professional
+                  Certificate Program
+                </li>
+                <li class="footerList">
+                  Data Science | Advanced Certificate Programme
+                </li>
+                <li class="footerList">Data Science | Executive Programme</li>
+                <li class="footerList">
+                  Machine Learning | Advanced Certificate Programme
+                </li>
+                <li class="footerList">
+                  Machine Learning & AI | Executive PG Programme
+                </li>
+                <li class="footerList">
+                  Machine Learning & NLP | Advanced Certificate Programme
+                </li>
+                <li class="footerList">
+                  Machine Learning & Deep Learning | Advanced Certificate
+                  Programme
+                </li>
+                <li class="footerList">
+                  Machine Learning & AI | Master of Science
+                </li>
+                <li class="footerList">
+                  Machine Learning & Cloud | Advanced Certification
+                </li>
+                <li class="footerList">
+                  M.Sc. in Machine Learning & AI | Master of Science
+                </li>
+                <li class="footerList">
+                  Master of Science (Data Science) | Master's Degree
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="footerListTopic">Business Analytics</div>
+            <div>
+              <ul>
+                <li class="footerList">Business Analytics | MBA (Executive)</li>
+                <li class="footerList">
+                  Business Analytics | Executive PG Programme
+                </li>
+                <li class="footerList">
+                  Business Analytics | Global Master Certificate in Business
+                  Analytics
+                </li>
+                <li class="footerList">
+                  Business Analytics | Business Analytics Certification
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="footerListTopic">Management</div>
+            <div>
+              <ul>
+                <li class="footerList">Business Administration | Doctorate</li>
+                <li class="footerList">
+                  Finance for Non-Finance Executives | Certificate Programme
+                </li>
+                <li class="footerList">Product Management | Certification</li>
+                <li class="footerList">
+                  Business Administration | Bachelor's Degree
+                </li>
+                <li class="footerList">Design Thinking | Certification</li>
+                <li class="footerList">
+                  Operations Management and Analytics | Certificate Programme
+                </li>
+                <li class="footerList">
+                  Human Resource Management | Executive PG Programme
+                </li>
+                <li class="footerList">Deakin Business School | MBA (Global)</li>
+                <li class="footerList">
+                  Liverpool Business School | MBA (Global)
+                </li>
+                <li class="footerList">
+                  MBA in Digital Finance and Banking | MBA
+                </li>
+                <li class="footerList">Deakin Business School | MBA (Global)</li>
+                <li class="footerList">
+                  Digital Marketing and Communication | Advanced Certificate
+                </li>
+                <li class="footerList">Management | PG Program</li>
+                <li class="footerList">PG Diploma in Management | PG Diploma</li>
+                <li class="footerList">Life Insurance Job | PG Program</li>
+                <li class="footerList">
+                  upGrad's Job Linked Management | PG Program
+                </li>
+                <li class="footerList">Life Insurance | PG Program</li>
+                <li class="footerList">
+                  Liverpool Business School | MBA - Marketing
+                </li>
+                <li class="footerList">
+                  Liverpool Business School | MBA - Finance
+                </li>
+                <li class="footerList">
+                  Liverpool Business School | MBA - Operations
+                </li>
+                <li class="footerList">
+                  Liverpool Business School | MBA - Strategy & Leadership
+                </li>
+                <li class="footerList">
+                  Integrated Supply Chain Management | Global Master Certificate
+                </li>
+                <li class="footerList">
+                  Effective Leadership and Management | Global Professional
+                  Certificate
+                </li>
+                <li class="footerList">
+                  Business Administration (General) | Master's Degree
+                </li>
+                <li class="footerList">
+                  HR Management and Analytics | Professional Certificate Programme
+                </li>
+                <li class="footerList">
+                  Deakin Business School and MICA | MBA (Global) with
+                  specialisation in Digital Marketing
+                </li>
+                <li class="footerList">
+                  Digital Branding & Advertising | Advanced Certificate
+                </li>
+                <li class="footerList">
+                  International Management | Master's Degree
+                </li>
+                <li class="footerList">
+                  Business degree programs in Australia for CU BBA students |
+                  Bachelor's Degree
+                </li>
+                <li class="footerList">
+                  Business Administration | Bachelor's Degree
+                </li>
+                <li class="footerList">
+                  Master of Business Administration (General) | MBA
+                </li>
+                <li class="footerList">
+                  Masters Qualifying Program | Masters Qualifying Program | upGrad
+                  Bschool
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="footerListTopic">Software & Technology</div>
+            <div>
+              <ul>
+                <li class="footerList">Computer Science | Master's Degree</li>
+                <li class="footerList">
+                  Computer Applications | Bachelor's Degree
+                </li>
+                <li class="footerList">
+                  Software Development - Spl. in Cyber Security | Executive PG
+                  Programme
+                </li>
+                <li class="footerList">
+                  Software Development - Spl. in Cloud Computing | Executive PG
+                  Programme
+                </li>
+                <li class="footerList">
+                  Software Development - Spl. in Full Stack Development |
+                  Executive PG Programme
+                </li>
+                <li class="footerList">
+                  Software Development - Spl. in Big Data | Executive PG Programme
+                </li>
+                <li class="footerList">
+                  Software Development - Spl. in DevOps | Executive PG Programme
+                </li>
+                <li class="footerList">
+                  Software Development - Spl. in Blockchain | Executive PG
+                  Programme
+                </li>
+                <li class="footerList">
+                  Software Engineering | PG Certification
+                </li>
+                <li class="footerList">
+                  Cyber Security | Advanced Certificate Programme
+                </li>
+                <li class="footerList">
+                  Cloud Computing | Advanced Certificate Programme
+                </li>
+                <li class="footerList">
+                  Big Data | Advanced Certificate Programme
+                </li>
+                <li class="footerList">
+                  DevOps | Advanced Certificate Programme
+                </li>
+                <li class="footerList">
+                  Blockchain | Advanced Certificate Programme
+                </li>
+                <li class="footerList">
+                  Bachelor of Computer Applications | Bachelor's Degree
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="footerLastBottom">
+          <div>
+            <div class="footerListTopic">LAW</div>
+            <div>
+              <ul>
+                <li class="footerList">
+                  Jindal Global Law School (JGLS) | LL.M. in Corporate & Financial
+                  Law
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="footerListTopic">ARTS</div>
+            <div>
+              <ul>
+                <li class="footerList">
+                  Communication and Journalism (English) | Master of Arts
+                </li>
+                <li class="footerList">
+                  Public Relations (English) | Master of Arts
+                </li>
+                <li class="footerList">
+                  Bachelor of Arts (Journalism & Mass Communication) | Bachelor's
+                  Degree
+                </li>
+                <li class="footerList">
+                  Master of Arts (Journalism & Mass Communication) | Master's
+                  Degree
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="footerListTopic">HEALTH</div>
+            <div>
+              <ul>
+                <li class="footerList">
+                  Healthcare Management | Executive PG Programme
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="footerListTopic">Study Abroad</div>
+            <div>
+              <ul>
+                <li class="footerList">Data Science | Master Degree</li>
+                <li class="footerList">
+                  International Management | Master's Degree
+                </li>
+                <li class="footerList">
+                  Business degree programs in Australia for CU BBA students |
+                  Bachelor's Degree
+                </li>
+                <li class="footerList">Cyber Security | Master's Degree</li>
+                <li class="footerList">
+                  Bachelor of Information Technology Pathway to Australia |
+                  Bachelor's Degree
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr id="last" />
+        <div class="footerList" id="lastLine">
+          © 2015-2021 upGrad Education Private Limited. All rights reserved
+        </div>
+      </div>    
+</body>
+</html>

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>upGrad | Learning Platform</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/Python1.css">
+    <style>
+      /* Menu*/
+
+    .popup_nav {
+      z-index: 11;
+      background: #f4f5f7;
+      position: fixed;
+      top: 75px;
+      width: 320px;
+      height: calc(100vh - 80px);
+      box-shadow: 0 4px 8px rgb(51 54 68 / 5%), 0 6px 10px rgb(51 54 68 / 10%);
+      overflow-y: auto;
+
+      opacity: 1;
+      transform: none;
+      display: none;
+    }
+
+    .closeTab {
+      background: #fff;
+      box-shadow: 0 0 4px rgb(51 54 68 / 5%), 0 2px 6px rgb(51 54 68 / 10%);
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      cursor: pointer;
+      position: -webkit-sticky;
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      border: 0 ;
+
+      padding: 14px 23px;
+
+      text-transform: none;
+
+      fill: #45526c !important;
+
+      height: 24;
+      width: 24;
+    }
+
+    .popup_expand {
+      border-bottom: 1px solid #dfe1e6;
+      padding: 0;
+      display: block;
+
+    }
+
+
+    .popup_content {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+
+      padding: 14px 23px;
+
+    }
+
+    /* .popup_content1{
+
+        }*/
+    .content_title {
+      font-size: 13px;
+      line-height: 16px;
+      color: #7c8698;
+      margin-bottom: 5px;
+    }
+
+    .content_para {
+      font-size: 16px;
+      line-height: 19px;
+      color: #45526c;
+
+      font-weight: 600;
+
+      display: flex;
+      flex-flow: column;
+    }
+
+    .down_btn {
+      color: rgb(73, 146, 255);
+      width: 2em;
+
+      margin: 0;
+      border: 0;
+      padding: 0;
+      display: inline-block;
+      vertical-align: middle;
+      background: 0 0;
+      font-size: 100%;
+      line-height: 100%;
+    }
+
+    .divider {
+      padding: inherit;
+      margin: 14px 23px;
+    }
+
+    .divider>div {
+      background: rgb(223, 225, 230);
+
+      position: absolute;
+      width: 85%;
+      height: 6px;
+      border-radius: 4px;
+
+      animation: progressColor 1s ease-in-out;
+    }
+
+    .contentOpen {
+      opacity: 1;
+      transform: none;
+      margin-top: -1em;
+      padding: 14px 23px;
+
+      transition: .2s cubic-bezier(.2, .2, .38, .9);
+      margin: 0;
+    }
+
+    .module_show {
+      background: #fff;
+      box-shadow: 0 0 4px rgb(51 54 68 / 5%), 0 2px 6px rgb(51 54 68 / 10%);
+      border-radius: 6px;
+      padding: 10px 16px;
+      margin-bottom: 10px;
+
+      transition: .2s cubic-bezier(.2, .2, .38, .9);
+
+    }
+
+    .module_name {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .module_name>div :nth-child(1) {
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    .module_name>div :nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #dfe1e6;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 140%;
+      margin-top: -10px;
+    }
+
+    .count {
+      color: #dfe1e6;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 140%;
+      margin-top: -10px;
+    }
+
+    .contentList_symbol {
+      margin-top: .5em;
+      display: flex;
+    }
+
+    .contentList_symbol>button {
+      margin-left: auto;
+
+      overflow: visible;
+      width: auto;
+      outline: none;
+
+      border: 0;
+      background-color: white;
+
+
+
+    }
+
+    .close {
+      color: rgb(47, 128, 237);
+    }
+
+    .contentList_symbol>button>span {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      margin-top: auto;
+      fill: none;
+    }
+
+    .mList {
+      opacity: 1;
+      transform: none;
+
+      display: flex;
+      flex-flow: column nowrap;
+      margin-top: 15px;
+      border-top: 1px solid #dfe1e6;
+
+    }
+
+    .mList div {
+      margin: 15px 0px 5px;
+    }
+
+    .arr {
+      float: right;
+    }
+    #sho1{
+      display: none;
+    }
+     #sho2{
+      display: none;
+    }
+     #sho3{
+      display: none;
+    }
+     #sho4{
+      display: none;
+    }
+    </style>
+  </head>
+  <body>
+     <div class="container">
+    <div class="welcomeContent">
+      <div class="layout_content">
+        <div class="internal_navBar">
+          <button id="navig" onclick="menuLst()">
+            <span class="material-icons">menu</span> NAVIGATE COURSES
+          </button>
+          <button id="q_a">
+            <span class="material-icons">question_answer</span> Q&A
+          </button>
+        </div>
+
+
+        <!--Popup Menu-->
+
+         <nav class="popup_nav">
+    <button class="closeTab" onclick="hidePopup()">
+      <span class="material-icons">close</span>
+    </button>
+    <div class="popup_expand pop1">
+      <div class="popup_content">
+        <div class="popup_content1">
+          <div class="content_title">Module1</div>
+          <div class="content_para">Learn Basic Python Programming</div>
+        </div>
+        <button class="down_btn">
+          <span class="material-icons" onclick="shoLst1()">expand_more</span>
+        </button>
+      </div>
+      <div id="sho1">
+        <div class="divider">
+          <div></div>
+        </div>
+        <div class="contentOpen">
+          <div class="module_show">
+            <div class="module_name">
+              <div>Basic Coding</div>
+              <div class="count">1</div>
+            </div>
+            <div class="contentList_symbol">
+              <button onclick="mLstShow()"><span class="material-icons close">close_fullscreen</span></button>
+            </div>
+            <div id="mListShow">
+            <div class="mList">
+              <div onclick= "welcmUpstart()"><span>Welcome to upStart</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div onclick="courseStruct()"><span>Course Structure</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div onclick="sessionOver()"><span>Session Overview</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Basic Refresher</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Real Life Scenarios of Prgramming - I</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Real Life Scenarios of Prgramming - II</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Swapping</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Even Or Odd</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Alarm Clock</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Factorial</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Reverse The Digits</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>How Many Chocolates?</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Print The Pattern</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Practice Question</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            <div class="mList">
+              <div><span>Graded Question</span>
+                <span class="material-icons arr">arrow_forward</span>
+              </div>
+            </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="module_show">
+            <div class="module_name">
+              <div>List</div>
+              <div class="count">2</div>
+            </div>
+            <div class="contentList_symbol">
+              <div>0/9 pages</div>
+              <button></span><span class="material-icons lock">lock</span></button>
+            </div>
+
+          </div>
+
+          <div class="module_show">
+            <div class="module_name">
+              <div>Strings</div>
+              <div class="count">3</div>
+            </div>
+            <div class="contentList_symbol">
+              <div>0/9 pages</div>
+              <button></span><span class="material-icons lock">lock</span></button>
+            </div>
+
+          </div>
+
+          <div class="module_show">
+            <div class="module_name">
+              <div>Other Data Structure </div>
+              <div class="count">4</div>
+            </div>
+            <div class="contentList_symbol">
+              <div>0/9 pages</div>
+              <button></span><span class="material-icons lock">lock</span></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--2nd part-->
+    <div class="popup_expand">
+      <div class="popup_content">
+        <div class="popup_content1">
+          <div class="content_title">Module2</div>
+          <div class="content_para">Industry Immersion</div>
+        </div>
+        <button class="down_btn">
+          <span class="material-icons" onclick="shoLst2()">expand_more</span>
+        </button>
+      </div>
+      <div id="sho2">
+      <div class="divider">
+        <div></div>
+      </div>
+      <div class="contentOpen">
+        <div class="module_show">
+          <div class="module_name">
+            <div>Expert Faculty Members</div>
+            <div class="count">1</div>
+          </div>
+          <div class="contentList_symbol">
+            <button><span class="material-icons close">close_fullscreen</span></button>
+          </div>
+          <div class="mList">
+            <div><span>Xpert Profile</span>
+              <span class="material-icons arr">arrow_forward</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="module_show">
+          <div class="module_name">
+            <div>Industry Projects</div>
+            <div class="count">2</div>
+          </div>
+          <div class="contentList_symbol">
+            <button><span class="material-icons close">close_fullscreen</span></button>
+          </div>
+          <div class="mList">
+            <div><span>Projects</span>
+              <span class="material-icons arr">arrow_forward</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="module_show">
+          <div class="module_name">
+            <div>Small Group Coaching</div>
+            <div class="count">3</div>
+          </div>
+          <div class="contentList_symbol">
+            <button><span class="material-icons close">close_fullscreen</span></button>
+          </div>
+          <div class="mList">
+            <div><span>Small Group Coaching</span>
+              <span class="material-icons arr">arrow_forward</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+
+
+    </div>
+
+    <!--3rd Part-->
+
+    <div class="popup_expand">
+      <div class="popup_content">
+        <div class="popup_content1">
+          <div class="content_title">Module 3</div>
+          <div class="content_para">Platform & Support</div>
+        </div>
+        <button class="down_btn">
+          <span class="material-icons" onclick="shoLst3()">expand_more</span>
+        </button>
+      </div>
+      <div id="sho3">
+      <div class="divider">
+        <div></div>
+      </div>
+      <div class="contentOpen">
+        <div class="module_show">
+          <div class="module_name">
+            <div>Learning Platform</div>
+            <div class="count">1</div>
+          </div>
+          <div class="contentList_symbol">
+            <div>0/4 pages</div>
+            <button></span><span class="material-icons lock">lock</span></button>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+    </div>
+
+    <!--4th Part-->
+
+    <div class="popup_expand">
+      <div class="popup_content">
+        <div class="popup_content1">
+          <div class="content_title">Module 4</div>
+          <div class="content_para">Career Service</div>
+        </div>
+        <button class="down_btn">
+          <span class="material-icons" onclick="shoLst4()">expand_more</span>
+        </button>
+      </div>
+      <div id="sho4">
+      <div class="divider">
+        <div></div>
+      </div>
+      <div class="contentOpen">
+        <div class="module_show">
+          <div class="module_name">
+            <div>Personalized Impact</div>
+            <div class="count">1</div>
+          </div>
+          <div class="contentList_symbol">
+            <div>0/1 pages</div>
+            <button></span><span class="material-icons lock">lock</span></button>
+          </div>
+
+        </div>
+
+        <div class="module_show">
+          <div class="module_name">
+            <div>Carrer Mentorship</div>
+            <div class="count">2</div>
+          </div>
+          <div class="contentList_symbol">
+            <div>0/4 pages</div>
+            <button></span><span class="material-icons lock">lock</span></button>
+          </div>
+
+        </div>
+
+        <div class="module_show">
+          <div class="module_name">
+            <div>Career Centre & Alumni Benefits</div>
+            <div class="count">3</div>
+          </div>
+          <div class="contentList_symbol">
+            <div>0/2 pages</div>
+            <button></span><span class="material-icons lock">lock</span></button>
+          </div>
+
+        </div>
+
+
+
+      </div>
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+
+
+
+        <div class="content_wrapper">
+          <div class="main_content">
+            <h1 class="content_head">Welcome to upStart</h1>
+            <div class="main_contentText">
+              <p class="text_para">
+                Welcome to our short-format courses where we’ve compressed our
+                learning experience to fit your weekend. Try as many courses as
+                you’d like, and take home a certification at the end of each
+                course - it’s on us.
+              </p>
+              <p>&nbsp;</p>
+
+              <p class="text_para">
+                In this 100% self-paced course, you’ll be learning about
+                problem-solving skills in Python using various elements such as
+                Strings, Lists, and Dictionaries.
+              </p>
+              <p>&nbsp;</p>
+
+              <p class="text_para">
+                We’ve roped in
+                <strong
+                  >Sajan Kedia, straight from Myntra, leading the Data Science
+                  Team of Pricing</strong
+                >
+                to show you the ropes. Over the next <strong>15hrs</strong>, he
+                will take you through a series of concepts interspersed with
+                pop-up questions and short assignments.&nbsp;
+              </p>
+              <p>&nbsp;</p>
+
+              <p class="text_para">
+                Since this is an advanced course, we recommend that you complete
+                the ‘Introduction to Python’ course before starting this
+                one.&nbsp;
+              </p>
+              <p>&nbsp;</p>
+
+              <p class="text_para">
+                <strong>Who this course is for: </strong>Python developers,
+                Product Managers, Data Analysts, Data Scientists, Machine
+                Learning Engineers, Financial advisors, Software developers,
+                Python developers.&nbsp;
+              </p>
+              <p>&nbsp;</p>
+
+              <p class="text_para">
+                If you’re looking for deeper knowledge along with extensive
+                career and mentorship support, you can join us for a
+                <strong
+                  ><span> Executive PG Programme in Data Science</span>, a
+                  12-month program with IIIT-B.</strong
+                >
+              </p>
+              <p>&nbsp;</p>
+
+              <p class="text_para">
+                <strong>Housekeeping Details:</strong>
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    Use the discussion forum to ask any questions you may have
+                    about the content.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Keep applying the concepts covered in this course to your
+                    day-to-day professional life to sharpen these skills
+                    further.
+                  </p>
+                </li>
+              </ul>
+
+              <p>&nbsp;</p>
+              <p >With over 20 million hours of learning delivered already, we have upskilled over 1 million&nbsp;learners. We are looking forward to having you be a part of our family.&nbsp;</p>
+               <p>&nbsp;</p>
+
+               <p>We’ll see you at the finish line!</p>
+               <p>&nbsp;</p>
+
+               <div class="error_container">
+                   <div class="report_error">
+                       <div class="display_error">
+                           <span class="material-icons">feedback</span>
+                          <span class="rep">Report an error</span>
+                       </div>
+                   </div>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom_navigation">
+            <div class="previous" ></div>
+            <div class="next">
+                <div class="next_part">
+                    <div class="next_title">NEXT</div>
+                    <div class="next_name">Course Structure</div>
+                </div>
+                <div id="arrow" class="material-icons">chevron_right</div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
+
+
+<script>
+ function hidePopup() {
+    let menu = document.querySelector('.popup_nav')
+    menu.style.display = "none";
+
+  }
+  function shoLst1(){
+    let show = document.querySelector('#sho1')
+    show.classList.toggle("display")
+  }
+  function shoLst2(){
+    let show = document.querySelector('#sho2')
+    show.classList.toggle("display")
+  }
+   function shoLst3(){
+    let show = document.querySelector('#sho3')
+    show.classList.toggle("display")
+  }
+   function shoLst4(){
+    let show = document.querySelector('#sho4')
+    show.classList.toggle("display")
+  }
+  function welcmUpstart(){
+    window.location.href = "WelcomeUpstart.html"
+  }
+  function courseStruct(){
+     window.location.href = "CourseStructure.html"
+  }
+   function sessionOver() {
+     window.location.href = "Session.html"
+  }
+  function mLstShow(){
+    let list = document.querySelector("#mListShow")
+    list.style.display = "none";
+  }
+  function menuLst(){
+     let menu = document.querySelector('.popup_nav')
+    menu.style.display = "block";
+  }
+  </script>

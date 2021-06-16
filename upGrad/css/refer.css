@@ -845,7 +845,7 @@ img {
 }
 #beforeMiddle .nu {
   position: absolute;
-  left: -20px;
+  left: -12px;
   top: -20px;
   width: 40px;
   height: 40px;
@@ -1388,7 +1388,7 @@ img {
 
 #topBox {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 #footerContainer {
   box-sizing: border-box;

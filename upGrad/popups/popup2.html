@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+#popup {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+}
+#popupItem {
+  background: #fff;
+  position: absolute;
+  width: 770px;
+  height: 415px;
+  left: 300px;
+  top: 80px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+#popupItem > div:nth-child(1) {
+  width: 216px;
+  height: 241px;
+  margin-top: 67px;
+  /* border: 1px solid red; */
+}
+#popupItem > div:nth-child(2) {
+  width: 355px;
+  height: 330px;
+  /* border: 1px solid red; */
+}
+#popupItem > div:nth-child(2) > :nth-child(1) {
+  font-size: 21px;
+  font-weight: 600;
+  color: black;
+}
+#popupItem > div:nth-child(2) > :nth-child(2) {
+  font-size: 21px;
+  font-weight: bold;
+  background-color: #fff;
+  opacity: 0.4;
+  color: rgb(90 86 86);
+  letter-spacing: 17px;
+  margin-left: 9px;
+  height: 40px;
+  border: none;
+}
+#popupItem > div:nth-child(2) > :nth-child(3) {
+  font-size: 13px;
+  font-weight: 500;
+  background-color: rgb(214 214 214);
+  opacity: 0.8;
+  color: rgb(189 176 176);
+  margin-left: 0px;
+  width: 350px;
+  height: 40px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  border: none;
+}
+#popup > #closePopup {
+  font-size: 60px;
+  font-weight: 400;
+  color: #dedede;
+  transform: rotate(45deg);
+  height: 20px;
+  width: 30px;
+  margin: 0px;
+  position: fixed;
+  right: 20px;
+  top: 50px;
+  cursor: pointer;
+}
+#popupItem > div:nth-child(2) > :nth-child(4) {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(169 156 156);
+  margin-left: 109px;
+  width: 350px;
+  height: 6px;
+  margin-top: 40px;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#popupItem > div:nth-child(2) > :nth-child(5) {
+  font-size: 12px;
+  font-weight: 600;
+  color: black;
+  margin-left: 104px;
+  width: 350px;
+  height: 6px;
+  margin-top: 50px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+     <div id="popup">
+      <div id="popupItem">
+        <div><img src="img/popupImage.png" alt="" /></div>
+        <div>
+          <p>Enter Your Mobile number to Start Learning</p>
+          
+          +91
+          
+          <input type="number" id="mobile" placeholder="9999999999" />
+          
+       
+        <button>CONTINUE</button>
+          <p>Proceed with Email</p>
+
+          <p>Have a Refrral Code ?</p>
+        </div>
+      </div>
+      <div id="closePopup" onclick="closepopup()">+</div>
+    </div>
+</body>
+</html>

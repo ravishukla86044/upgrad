@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body{
+      /* background-color:greenyellow; */
+    }
+  p, div, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: 0 0;
+}
+  *, :after, :before {
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.popup_box {
+  width: 777px;
+    height: 400px;
+    animation-duration: 300ms;
+    text-align: start;
+/* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 101;
+    padding: 0;
+    /* width: 100%;
+    height: 90%; */
+    background: #fff;
+    border-radius: 4px;
+    /* text-align: center; */
+    /* -webkit-box-shadow: 0 20px 55px rgb(0 0 0 / 35%); */
+    box-shadow: 0 20px 55px rgb(0 0 0 / 35%);
+}
+.popupComponent {
+    display: flex;
+    height: 472px;
+    width: 777px;
+
+}
+.popupComponent_left {
+  background: #fff;
+    width: 337px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+.popupComponent_left_img {
+  width: auto;
+  height: 189px;
+  max-width: 100%;
+
+}
+.popupComponent_right{
+    background: #fff;
+    padding: 32px 48px;
+    max-width: 472px;
+    max-height: 777px;
+    display: flex;
+    box-shadow: 0 2px 85px 9px rgb(154 153 153 / 6%);
+    flex-direction: column;
+}
+.popupComponent_right_heading{
+    display: unset;
+
+}
+.popupComponent_right_heading_text{
+    margin: 10px 0;
+    font-weight: 700;
+    font-size: 24px;
+    color: #293030;
+}
+/* .popupComponent_right_upspace{
+  width: 20px;
+    height: 16px;
+    left: calc(50% - 4px);
+    top: calc(50% - 164px);
+    transform: matrix(1,0,0,-1,0,0);
+    margin-bottom: 24px;
+    cursor: pointer;
+} */
+.popupComponent_right_belowheading_text{
+    margin: 10px 0;
+}
+/* .popupComponent_right_belowpart{
+  margin-top: 40px;
+} */
+.popup_work_form {
+    margin: 0;
+    display: block;
+}
+.popup_work_form_div1 {
+    overflow-y: auto;
+    height: 212px;
+    padding: 5px 0;
+}
+.popup_work_form_div1_1{
+    padding-bottom: 20px;
+}
+.popup_work_form_div1_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.popup_work_form_div1_3{
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    margin-top: 22px;
+    margin-bottom: 20px;
+
+}
+#popup_work_form_div1_4{
+    line-height: 20px;
+    color: #878787;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: -10px;
+    -webkit-transition: all .2s ease;
+    width: 94%;
+}
+#svg1{
+    width: auto;
+    cursor: pointer;
+    margin-right: 10px;
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+
+}
+#popup_work_option_div1{
+    display: none;
+    background: #fff;
+}
+.popupComponent_right_belowpart_form_p{
+  font-weight: 700;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: .03em;
+  /* margin-top: 0px; */
+}
+ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.popup_work_option_ul1{
+    overflow-y: scroll;
+
+}
+li {
+    list-style-type: none;
+    list-style: none;
+}
+.popup_work_option_li1{
+    cursor: pointer;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    width: 226px;
+    height: 30px;
+    padding: 19px 8px;
+
+}
+.popup_work_option_li1_div1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popup_work_option_li1_div1_span1{
+    height: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #000;
+    margin-right: 5px;
+}
+#num_svg{
+  width: auto;
+  cursor: pointer;
+    padding: 0 10px;
+    transition: all .5s ease;
+    transform: rotate(180deg);
+    max-width: 100%;
+    height: auto;
+}
+.popup_right_input{
+  outline: none;
+    border: none;
+    width: 200px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: .12em;
+    color: #091e42;
+    font-family: inherit;
+
+}
+button, input, label, select, textarea {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: 0 0;
+    font-size: 100%;
+    line-height: 100%;
+}
+.popupComponent_right_belowpart_form_belowspace{
+  margin-top: 15px;
+}
+.popupComponent_right_belowpart_form_belowspace_span{
+  font-weight: 600;
+    font-size: 16px;
+    line-height: 138%;
+    color: #e32525;
+    padding-top: 8px;
+    overflow: hidden;
+    font-style: inherit;
+}
+.popupComponent_right_belowpart_form_button_div{
+  width: 379px;
+    padding-left: 49px;
+
+}
+.popupComponent_right_belowpart_form_button{
+  background: #e0e1e2;
+    opacity: .6;
+    text-transform: uppercase;
+    width: 344px;
+    height: 40px;
+    /* background: linear-gradient(
+270deg
+,#ff5757,#d02035); */
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    transition: background .8s;
+    margin: 10px 0;
+    font-family: inherit;
+    cursor: pointer;
+
+}
+button, input[type=button], input[type=reset], input[type=submit] {
+    overflow: visible;
+    /* width: auto; */
+    box-sizing: border-box;
+}
+.popupComponent_right_belowpart_form_button_span{
+  color: inherit;
+  font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#arrow_svg{
+  width: 17;
+    height: 14;
+    fill: currentcolor;
+}
+.popup_pwe{
+  width: 379px;
+    padding-left: 49px;
+
+}
+.popup_pwe_div1{
+  font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+    text-transform: none;
+    color: #b4bac4;
+    display: flex;
+    margin-bottom: 0;
+    justify-content: center;
+
+}
+.popup_pwe_span{
+  font-weight: 700;
+  text-decoration-line: underline;
+    color: #7c8698;
+    padding-left: 5px;
+    cursor: pointer;
+    opacity: .8;
+}
+.popupComponent_right_belowform{
+  width: 440px;
+    height: 48px;
+    padding: 12px 48px;
+    margin: 32px 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.popupComponent_right_belowform_span{
+  font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    color: #091e42;
+}
+.popupComponent_right_belowform_label{
+  position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 26px;
+
+}
+.popupComponent_right_belowform_label_input{
+  width: 13px;
+    height: 13px;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    opacity: 0;
+}
+.popupComponent_right_belowform_label_input_span{
+  position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+
+}
+.popupComponent_right_belowform_label_input_span::before{
+  position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 0;
+    bottom: 0;
+    right: 15px;
+    top: 0;
+    margin: auto;
+    background-color: #fff;
+    transition: .4s;
+    border-radius: 50%;
+}
+.popupComponent_right_belowform_label_input:checked+.popupComponent_right_belowform_label_input_span{
+  background-color: #02a971;
+}
+.popupComponent_right_belowform_label_input:checked+.popupComponent_right_belowform_label_input_span::before{
+  transform: translateX(16px);
+}
+  </style>
+</head>
+<body>
+  
+
+  <!-- <div> -->
+    <!-- <div class="popup_div1">
+
+      <span class="popup_div1_span"></span> -->
+      <!-- <div class="popup_div2"></div> -->
+      <div class="popup_box">
+        <div class="OTPauthModal">
+          <div class="popupComponent">
+            <div class="popupComponent_left">
+              <img src="img/popupImage.png" alt="" class="popupComponent_left_img">
+            </div>
+            <div class="popupComponent_right">
+              <!-- <div class="popupComponent_right_upspace"></div> -->
+              <div class="popupComponent_right_heading">
+                <div class="popupComponent_right_heading_text">Awesome! Just a few more details</div>
+                <div class="popupComponent_right_belowheading_text">We’ll be using this information for your application</div>
+              </div>
+             <form class="popup_work_form">
+                 <div class="popup_work_form_div1">
+                     <div class="popup_work_form_div1_1">
+                         <div class="popup_work_form_div1_2">
+                             <div class="popup_work_form_div1_3">
+                                 <div id="popup_work_form_div1_4">Are you a working professional</div>
+                                 <svg id="svg1" onclick="showWork()" width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 8L0 0H16L8 8Z" fill="#263238"/>
+                                    </svg>
+                                    <div id="popup_work_option_div1">
+                                        <div>
+                                            <ul class="popup_work_option_ul1">
+                                                <li class="popup_work_option_li1">
+                                                    <div class="popup_work_option_li1_div1">
+                                                        <span onclick="typethis()" class="popup_work_option_li1_div1_span1" id="option_1">
+                                                            Yes, I am a working professional  
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li class="popup_work_option_li1">
+                                                    <div class="popup_work_option_li1_div1">
+                                                        <span onclick="typethis1()" class="popup_work_option_li1_div1_span1" id="option_2">
+                                                            No, I am an undergraduate    
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="popupComponent_right_belowpart_form_button_div">
+                    <button onclick="addLocation(event)" class="popupComponent_right_belowpart_form_button" type="submit">
+                      <span class="popupComponent_right_belowpart_form_button_span">
+                        <span>CONTINUE</span>
+                        <svg id="arrow_svg" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24"/><path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"/></svg>
+                      </span>
+                    </button>
+                  </div>
+             </form> 
+              
+
+
+</body>
+</html>
+<script>
+
+function showWork(){
+   var change = document.getElementById('popup_work_option_div1')
+  if(change.style.display == "block"){
+    change.style.display = "none"
+  }
+  else{
+    change.style.display = "block"
+  }
+}
+
+function typethis(){
+  var work = document.getElementById('popup_work_form_div1_4');
+  
+  work.innerText = document.getElementById('option_1').innerText
+  work.style.color = "black"
+}
+function typethis1(){
+  var work = document.getElementById('popup_work_form_div1_4');
+  
+  work.innerText = document.getElementById('option_2').innerText
+  work.style.color = "black"
+}
+
+function addLocation(e){
+  e.preventDefault()
+    console.log("dwedwe")
+    window.location.href = "popup_success.html"
+}
+</script>

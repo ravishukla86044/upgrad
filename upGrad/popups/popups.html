@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body{
+      background-color:transparent;
+      opacity: 1.0;
+    }
+  p, div, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: 0 0;
+}
+  *, :after, :before {
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.popup_box {
+  width: 777px;
+    height: 400px;
+    animation-duration: 300ms;
+    text-align: start;
+/* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 101;
+    padding: 0;
+    /* width: 100%;
+    height: 90%; */
+    background: #fff;
+    border-radius: 4px;
+    /* text-align: center; */
+    /* -webkit-box-shadow: 0 20px 55px rgb(0 0 0 / 35%); */
+    box-shadow: 0 20px 55px rgb(0 0 0 / 35%);
+}
+.popupComponent {
+  display: flex;
+    align-items: center;
+    background: #fff;
+
+}
+.popupComponent_left {
+  background: #fff;
+    width: 337px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+.popupComponent_left_img {
+  width: auto;
+  height: 189px;
+  max-width: 100%;
+
+}
+.popupComponent_right{
+  width: 440px;
+    box-shadow: 0 2px 85px 9px rgb(154 153 153 / 6%);
+    padding-top: 32px;
+    min-height: 417px;
+
+}
+.popupComponent_right_heading{
+  padding-left: 48px;
+    z-index: 10;
+    position: relative;
+
+}
+.popupComponent_right_heading_text{
+  width: 90%;
+    height: auto;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 112%;
+    color: #293030;
+    margin-bottom: 8px;
+
+}
+.popupComponent_right_upspace{
+  width: 20px;
+    height: 16px;
+    left: calc(50% - 4px);
+    top: calc(50% - 164px);
+    transform: matrix(1,0,0,-1,0,0);
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+.popupComponent_right_belowspace{
+  width: 90%;
+    height: auto;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 138%;
+    color: #546e7a;
+}
+.popupComponent_right_belowpart{
+  margin-top: 40px;
+}
+.popupComponent_right_belowpart_form {
+  flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: auto;
+    width: auto;
+    z-index: 10;
+    position: relative;
+}
+.popupComponent_right_belowpart_form_div1 {
+  width: 379px;
+    padding-left: 49px;
+}
+.popupComponent_right_belowpart_form_div2{
+  position: relative;
+    display: flex;
+    align-items: baseline;
+    max-height: 24px;
+}
+.popupComponent_right_belowpart_form_div3 {
+  display: flex;
+    align-items: baseline;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.popupComponent_right_belowpart_form_div3_1{
+  width: 24px;
+    height: 24px;
+    padding: 10px;
+    margin-right: 10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAANlBMVEUSiAdgmCtwcL14eMB5ecB9fcOAgMWJicmSksyTk8yTk82UlM2vr9q/v+Hg4PH/mTP/u3f///+1rU14AAAARklEQVQoz9XOMRKAIAxE0RhQBJMF7n9ZW1Kwtb4yf2Yn0in5cB6UzJXlbOEQsj3A7duc0AqU5HKRbBU49+PTVT2+dlDyWy8zUxeIwBMVGgAAAABJRU5ErkJggg==);
+    position: relative;
+    display: inline-block;
+    line-height: 1em;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.popupComponent_right_belowpart_form_div3_1::before{
+  content: " ";
+}
+.popupComponent_right_belowpart_form_p{
+  font-weight: 700;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: .03em;
+  /* margin-top: 0px; */
+}
+#num_svg{
+  width: auto;
+  cursor: pointer;
+    padding: 0 10px;
+    transition: all .5s ease;
+    transform: rotate(180deg);
+    max-width: 100%;
+    height: auto;
+}
+.popup_right_input{
+  outline: none;
+    border: none;
+    width: 200px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: .12em;
+    color: #091e42;
+    font-family: inherit;
+
+}
+button, input, label, select, textarea {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: 0 0;
+    font-size: 100%;
+    line-height: 100%;
+}
+.popupComponent_right_belowpart_form_belowspace{
+  margin-top: 15px;
+}
+.popupComponent_right_belowpart_form_belowspace_span{
+  font-weight: 600;
+    font-size: 16px;
+    line-height: 138%;
+    color: #e32525;
+    padding-top: 8px;
+    overflow: hidden;
+    font-style: inherit;
+}
+.popupComponent_right_belowpart_form_button_div{
+  width: 379px;
+    padding-left: 49px;
+
+}
+.popupComponent_right_belowpart_form_button{
+  background: #e0e1e2;
+    opacity: .6;
+    text-transform: uppercase;
+    width: 344px;
+    height: 40px;
+    /* background: linear-gradient(
+270deg
+,#ff5757,#d02035); */
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    transition: background .8s;
+    margin: 10px 0;
+    font-family: inherit;
+    cursor: pointer;
+
+}
+button, input[type=button], input[type=reset], input[type=submit] {
+    overflow: visible;
+    /* width: auto; */
+    box-sizing: border-box;
+}
+.popupComponent_right_belowpart_form_button_span{
+  color: inherit;
+  font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#arrow_svg{
+  width: 17;
+    height: 14;
+    fill: currentcolor;
+}
+.popup_pwe{
+  width: 379px;
+    padding-left: 49px;
+
+}
+.popup_pwe_div1{
+  font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+    text-transform: none;
+    color: #b4bac4;
+    display: flex;
+    margin-bottom: 0;
+    justify-content: center;
+
+}
+.popup_pwe_span{
+  font-weight: 700;
+  text-decoration-line: underline;
+    color: #7c8698;
+    padding-left: 5px;
+    cursor: pointer;
+    opacity: .8;
+}
+.popupComponent_right_belowform{
+  width: 440px;
+    height: 48px;
+    padding: 12px 48px;
+    margin: 32px 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.popupComponent_right_belowform_span{
+  font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    color: #091e42;
+}
+.popupComponent_right_belowform_label{
+  position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 26px;
+
+}
+.popupComponent_right_belowform_label_input{
+  width: 13px;
+    height: 13px;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    opacity: 0;
+}
+.popupComponent_right_belowform_label_input_span{
+  position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+
+}
+.popupComponent_right_belowform_label_input_span::before{
+  position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 0;
+    bottom: 0;
+    right: 15px;
+    top: 0;
+    margin: auto;
+    background-color: #fff;
+    transition: .4s;
+    border-radius: 50%;
+}
+.popupComponent_right_belowform_label_input:checked+.popupComponent_right_belowform_label_input_span{
+  background-color: #02a971;
+}
+.popupComponent_right_belowform_label_input:checked+.popupComponent_right_belowform_label_input_span::before{
+  transform: translateX(16px);
+}
+#validmobile{
+  margin-top: 15px;
+  margin-left: 50px;
+}
+#validmobile_span{
+  font-weight: 600;
+    font-size: 16px;
+    line-height: 138%;
+    color: #e32525;
+    padding-top: 8px;
+    overflow: hidden;
+}
+  </style>
+</head>
+<body>
+  
+
+  <!-- <div> -->
+    <!-- <div class="popup_div1">
+
+      <span class="popup_div1_span"></span> -->
+      <!-- <div class="popup_div2"></div> -->
+      <div class="popup_box">
+        <div class="OTPauthModal">
+          <div class="popupComponent">
+            <div class="popupComponent_left">
+              <img src="img/popupImage.png" alt="" class="popupComponent_left_img">
+            </div>
+            <div class="popupComponent_right">
+              <div class="popupComponent_right_upspace"></div>
+              <div class="popupComponent_right_heading">
+                <div class="popupComponent_right_heading_text">Enter your mobile number to start learning</div>
+                <div class="popupComponent_right_belowspace"></div>
+              </div>
+              <div class="popupComponent_right_belowpart">
+                <form class="popupComponent_right_belowpart_form" id="popup_contact_form">
+                  <div class="popupComponent_right_belowpart_form_div1">
+                    <div class="popupComponent_right_belowpart_form_div2">
+                      <div class="popupComponent_right_belowpart_form_div3">
+                        <div class="popupComponent_right_belowpart_form_div3_1"></div>
+                        <p class="popupComponent_right_belowpart_form_p">+ 91</p>
+                        <svg id="num_svg" width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.738 5.82464L6.00678 1.66016L1.24947 5.82464C0.622127 6.38741 -0.449577 5.46447 0.2039 4.9017L5.56242 0.151946C5.79767 -0.0506497 6.18976 -0.0506497 6.39887 0.151947L11.8097 4.9017C12.437 5.46447 11.3653 6.38741 10.738 5.82464Z" fill="#222222"/>
+                          </svg>
+                      </div>
+                      <input type="tel" class="popup_right_input" id="mobile" placeholder="99999 99999" value="">
+                    </div>
+                    <div class="popupComponent_right_belowpart_form_belowspace">
+                      <span class="popupComponent_right_belowpart_form_belowspace_span"></span>
+                    </div>
+                  </div>
+                  <div id="validmobile">
+                    <span id="validmobile_span">Please enter a valid mobile number</span>
+                  </div>
+                  <div class="popupComponent_right_belowpart_form_button_div" >
+                    <button onclick="addLocations(event)" id="btn_color_change" class="popupComponent_right_belowpart_form_button" type="submit" >
+                      <span class="popupComponent_right_belowpart_form_button_span">
+                        <span >CONTINUE</span>
+                        <svg id="arrow_svg" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24"/><path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"/></svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="popup_pwe">
+                    <div class="popup_pwe_div1">
+                      <span class="popup_pwe_span">Proceed with Email</span>
+                    </div>
+                  </div>
+                </form>
+                <div class="popupComponent_right_belowform">
+                  <span class="popupComponent_right_belowform_span">Have a Referral Code?</span>
+                  <label class="popupComponent_right_belowform_label">
+                    <input type="checkbox" class="popupComponent_right_belowform_label_input">
+                    <span class="popupComponent_right_belowform_label_input_span"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  <!-- </div> -->
+
+
+</body>
+</html>
+<script>
+
+  function addLocations(e){
+    e.preventDefault()
+    var form = document.getElementById('popup_contact_form')
+  let mobile = form.mobile.value
+  console.log(mobile.length)
+  if(mobile.length == 10){
+    document.getElementById('btn_color_change').style.backgroundColor = "red"
+    document.getElementById('validmobile_span').style.display = "none"
+  }
+  let contact = {
+    mobile,
+  }
+  let arr;
+  arr = localStorage.getItem('contacts')
+    if (arr == null){
+        arr = [];
+    }
+    else{
+        arr = JSON.parse(arr);
+    }
+
+    arr.push(contact);
+    localStorage.setItem('contacts', JSON.stringify(arr));
+    window.location.href = "popup_otp.html"
+  }
+  
+  
+
+</script>
