@@ -16,10 +16,10 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onclick="notPlay(event)">
     <div id="title">
       <div>
-        <a href="upgrade.html" id="logo">upGrad</a>
+        <a href="upgrade_clone_merged.html" id="logo">upGrad</a>
         <div>Shorts</div>
       </div>
     </div>
@@ -41,14 +41,20 @@
         </ul>
       </div>
       <div id="items">
-        <div id="item1" class="all book">
-          <div class="time">02:03</div>
+        <div id="item1" class="all book" onclick="play(event)">
+          <div class="time">05:03</div>
           <div class="videoTitle">
             <p>Vicky Kaushal</p>
             <h2>Kaise Bane Hyperfocused?</h2>
             <div class="views">177 views</div>
-            <video>
-              <source src="video/1.ts" type="video/ts" />
+            <video
+              controls
+              poster="https://images.upgrad.com/1494092d-ef0c-48f1-af73-ee8992839788-thumbnails-raho-ambitious-4-316x250-brain.png"
+            >
+              <source
+                src="video/Vicky Kaushal presents _Hyperfocus_ by Chris Bailey _ Standup Book - _LifeLongLearning(360P).mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
@@ -92,12 +98,18 @@
             <div class="views">7 views</div>
           </div>
         </div>
-        <div id="item7" class="all book">
-          <div class="time">01:31</div>
+        <div id="item7" class="all book" onclick="play(event)">
+          <div class="time">04:45</div>
           <div class="videoTitle">
             <p>Vicky Kaushal</p>
             <h2>Be Fearless By Jean Case</h2>
             <div class="views">7 views</div>
+            <video controls>
+              <source
+                src="video/Vicky Kaushal presents _Be Fearless_ by Jean Case _ Standup Book - _LifeLongLearning(360P).mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
         <div id="item8" class="all tech">
@@ -108,12 +120,18 @@
             <div class="views">0 views</div>
           </div>
         </div>
-        <div id="item9" class="all book">
-          <div class="time">02:18</div>
+        <div id="item9" class="all book" onclick="play(event)">
+          <div class="time">04:27</div>
           <div class="videoTitle">
             <p>Vicky Kaushal</p>
             <h2>Soonish by Kelly & Zach Weinersmith</h2>
             <div class="views">5 views</div>
+            <video controls>
+              <source
+                src="video/Vicky Kaushal presents _Soonish_ by Kelly _ Zach Weinersmith _ Standup Book _ _LifeLongLearning(360P).mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
         <div id="item10" class="all tips">
@@ -156,12 +174,18 @@
             <div class="views">3 views</div>
           </div>
         </div>
-        <div id="item15" class="all book">
-          <div class="time">02:31</div>
+        <div id="item15" class="all book" onclick="play(event)">
+          <div class="time">05:04</div>
           <div class="videoTitle">
             <p>Vicky Kaushal</p>
             <h2>The 5 AM Club by Robin Sharma</h2>
             <div class="views">19 views</div>
+            <video controls>
+              <source
+                src="video/Vicky Kaushal presents Robin Sharma_s 5 AM  Club _ Standup Book - _LifeLongLearning(360P).mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
         <div id="item16" class="all tips">
@@ -384,5 +408,21 @@
 
       ani.style.opacity = "1";
     }, 200);
+  }
+
+  function play(e) {
+    e.stopPropagation();
+    let a = e.target;
+    notPlay(e);
+    let b = a.querySelector("video");
+    b.classList.toggle("play");
+  }
+  function notPlay(e) {
+    let a = document.querySelectorAll("video");
+    a.forEach(function (b) {
+      b.pause();
+      b.removeAttribute("class", "play");
+    });
+    e.stopPropagation();
   }
 </script>

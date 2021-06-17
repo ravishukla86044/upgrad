@@ -13,6 +13,11 @@ body {
   margin: 0px;
   padding: 0px;
 }
+#topBox {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 #headerTopBox {
   /* border: 1px solid red; */
   min-width: 1140px;
@@ -543,7 +548,7 @@ body {
 
 #navBarList > ul {
   padding: 0px;
-  margin-top: 23px;
+  /* margin-top: 23px; */
   display: inline;
 }
 #navBarList > ul > li {
@@ -862,7 +867,7 @@ p {
 .iconDiv {
   margin: 0px 6px;
   min-width: 120px;
-  height: 100px;
+  height: 95px;
 
   box-shadow: 0 4px 16px rgba(189, 189, 189, 0.24),
     0 4px 16px rgba(189, 189, 189, 0.24);
@@ -1520,10 +1525,10 @@ svg {
   text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
 }
 #sec1_leftarrow {
-  left: 118px;
+  left: 80px;
   right: auto;
   position: absolute;
-  top: 40%;
+  top: 45%;
   margin-top: calc(-1 * 44px / 2);
   z-index: 10;
   cursor: pointer;
@@ -1575,7 +1580,7 @@ svg {
   right: 118px;
   left: auto;
   position: absolute;
-  top: 40%;
+  top: 45%;
   margin-top: calc(-1 * 44px / 2);
   z-index: 10;
   cursor: pointer;
@@ -1641,7 +1646,7 @@ svg {
 }
 .card_collector {
   display: flex;
-  width: 80vw;
+  /* width: 80vw; */
   margin: 48px auto;
   align-items: center;
   background-color: #fff;
@@ -1722,6 +1727,9 @@ img {
 
   padding-top: 180px;
   padding-bottom: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .default_title {
   width: 80vw;
@@ -2757,6 +2765,9 @@ img {
   text-align: center;
 
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* #forCenter {

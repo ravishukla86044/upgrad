@@ -7,7 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>upGrad | Learning Platform</title>
   <link rel="stylesheet" href="css/Python1.css" />
+   <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/python.css" />
   <style>
     .popup_nav {
       z-index: 11;
@@ -95,11 +104,7 @@
       line-height: 100%;
     }
 
-    .divider {
-      padding: inherit;
-      margin: 14px 23px;
-    }
-
+   
     .divider>div {
       background: rgb(223, 225, 230);
 
@@ -306,12 +311,12 @@
 
     .divider {
       padding: inherit;
-      margin: 14px 23px;
+      /* margin: 14px 23px; */
     }
 
-    .divider>div {
+    .divider > div {
       background: rgb(223, 225, 230);
-
+      margin-left: 20px;
       position: absolute;
       width: 85%;
       height: 6px;
@@ -436,6 +441,74 @@
 </head>
 
 <body>
+
+ <!--header-->
+    <div id="header" class="container1">
+      <div id="nav">
+        <a href="upgrade.html"
+          >upGrad
+          <p>Learn Basic Python Programming</p>
+        </a>
+        <ul>
+          <li>
+            <a href="python.html">
+              <span class="material-icons"> home </span>
+              <p>Home</p></a
+            >
+          </li>
+          <li>
+            <a href="">
+              <span class="material-icons"> chat_bubble_outline </span>
+              <p>Discussion</p></a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li><span class="material-icons"> calendar_today </span></li>
+          <li>
+            <span class="material-icons"> notifications_none </span>
+          </li>
+          <li>
+            <div onclick="popUp()">R</div>
+            <div id="popUp">
+              <ul>
+                <li>
+                  <span class="material-icons"> account_circle </span>
+                  <p>My Profile</p>
+                </li>
+                <li>
+                  <span class="material-icons"> swap_horiz </span>
+                  <p>Switch Program</p>
+                </li>
+                <li>
+                  <span class="material-icons"> turned_in_not </span>
+                  <p>Followed Questions</p>
+                </li>
+                <li>
+                  <span class="material-icons"> settings </span>
+                  <p>Account Settings</p>
+                </li>
+                <li>
+                  <span class="material-icons"> help_outline </span>
+                  <p>Help & Support</p>
+                </li>
+                <li class="log" onclick="logout()">
+                  <span class="material-icons"> logout</span>
+                  <p>Logout</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+
   <div class="container">
     <div class="welcomeContent">
       <div class="layout_content">
@@ -1166,7 +1239,7 @@
         </div>
 
         <div class="bottom_navigation">
-          <div class="previous">
+          <div class="previous" onclick="courseStruct()">
             <div id="arrow" class="material-icons">chevron_left</div>
             <div class="prev_part">
               <div class="prev_title">PREVIOUS</div>
@@ -1176,7 +1249,7 @@
           <div class="next">
             <div class="next_part">
               <div class="next_title">NEXT</div>
-              <div class="next_name">Course Structure</div>
+              <div class="next_name">Basic Refresher</div>
             </div>
             <div id="arrow" class="material-icons">chevron_right</div>
           </div>
@@ -1212,6 +1285,7 @@
   }
   function welcmUpstart(){
     window.location.href = "WelcomeUpstart.html"
+     console.log(1)
   }
   function courseStruct(){
      window.location.href = "CourseStructure.html"
@@ -1226,5 +1300,14 @@
   function menuLst(){
      let menu = document.querySelector('.popup_nav')
     menu.style.display = "block";
+  }
+
+   function popUp() {
+    let a = document.getElementById("popUp");
+    a.classList.toggle("display");
+  }
+
+  function logout() {
+    window.location.href = "upgrade_clone_merged.html";
   }
   </script>

@@ -12,6 +12,8 @@ body {
   font-variant-ligatures: common-ligatures;
   color: #1a202c;
   margin: 0px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #title {
@@ -472,4 +474,12 @@ body {
   z-index: 7;
   top: 0px;
   left: 0px;
+  background-color: black;
+}
+
+.videoTitle video {
+  display: none;
+}
+.play {
+  display: flex !important;
 }

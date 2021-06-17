@@ -33,7 +33,7 @@
     </div>
     <div id="topBox">
       <div id="headerTopBox">
-        <div id="headerTopBoxlogo">upGrad</div>
+        <div id="headerTopBoxlogo" onclick="moveToHome()">upGrad</div>
         <div id="headerTopBoxNavbar" class="mobile-hidden">
           <div id="courseList">
             <div>
@@ -2614,5 +2614,9 @@
     let b = e.currentTarget.nextElementSibling;
 
     b.classList.toggle("hiddenInsideNone");
+  }
+
+  function moveToHome() {
+    window.location.href = "upgrade_clone_merged.html";
   }
 </script>

@@ -20,6 +20,7 @@ body {
 }
 .container {
   background-color: #f4f5f7;
+  margin-top: 78px;
 }
 .welcomeContent {
   width: 100%;
@@ -185,7 +186,6 @@ strong span:hover {
 .bottom_navigation .previous {
   border-right: 1px solid #dfe1e6;
   opacity: 0.5;
-  pointer-events: none;
 }
 .bottom_navigation .next,
 .bottom_navigation .previous {
@@ -280,4 +280,7 @@ h2 {
 
 .display {
   display: block !important;
+}
+.display #mListShow.on {
+  display: block;
 }

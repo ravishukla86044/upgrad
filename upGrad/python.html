@@ -22,7 +22,7 @@
   <body>
     <div id="header" class="container">
       <div id="nav">
-        <a href="upgrade.html"
+        <a href="upgrade_clone_merged.html"
           >upGrad
           <p>Learn Basic Python Programming</p>
         </a>
@@ -69,7 +69,7 @@
                   <span class="material-icons"> help_outline </span>
                   <p>Help & Support</p>
                 </li>
-                <li class="log">
+                <li class="log" onclick="logout()">
                   <span class="material-icons"> logout</span>
                   <p>Logout</p>
                 </li>
@@ -77,6 +77,7 @@
             </div>
           </li>
         </ul>
+        <img src="https://www.upgrad.com/favicon.ico" alt="" />
       </div>
     </div>
     <div id="afterHeader" class="container">
@@ -184,18 +185,24 @@
                   </div>
                 </div>
                 <div class="moreContent">
-                  <a href="/WelcomeUpstart.html" target="_blank"> <div class="button">
-                    <div class="title">Welcome to upStart</div>
-                    <span class="material-icons"> play_circle </span>
-                  </div></a>
-                  <a href="/CourseStructure.html" target="_blank"> <div class="button">
-                    <div class="title">Course Structure</div>
-                    <span class="material-icons"> play_circle </span>
-                  </div></a>
-                  <a href="/Session.html" target="_blank"><div class="button">
-                    <div class="title">Session Overview</div>
-                    <span class="material-icons"> check </span>
-                  </div></a>
+                  <a href="/WelcomeUpstart.html" target="_blank">
+                    <div class="button">
+                      <div class="title">Welcome to upStart</div>
+                      <span class="material-icons"> play_circle </span>
+                    </div></a
+                  >
+                  <a href="/CourseStructure.html" target="_blank">
+                    <div class="button">
+                      <div class="title">Course Structure</div>
+                      <span class="material-icons"> play_circle </span>
+                    </div></a
+                  >
+                  <a href="/Session.html" target="_blank"
+                    ><div class="button">
+                      <div class="title">Session Overview</div>
+                      <span class="material-icons"> check </span>
+                    </div></a
+                  >
                   <div class="button">
                     <div class="title">Session Overview</div>
                     <span class="material-icons"> lock </span>
@@ -682,5 +689,9 @@
   function popUp() {
     let a = document.getElementById("popUp");
     a.classList.toggle("display");
+  }
+
+  function logout() {
+    window.location.href = "upgrade_clone_merged.html";
   }
 </script>

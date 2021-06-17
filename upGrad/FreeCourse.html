@@ -30,7 +30,7 @@
   </div>
   <div id="topBox">
     <div id="headerTopBox">
-      <div id="headerTopBoxlogo">upGrad</div>
+      <div id="headerTopBoxlogo" onclick="moveToHome()">upGrad</div>
       <div id="headerTopBoxNavbar" class="mobile-hidden">
         <div id="courseList">
           <div>
@@ -969,7 +969,7 @@
           </div>
 
           <div class="carousel__actions">
-            <button id="carousel__button--prev " class="material-icons">arrow_back_ios</button>
+            <button id="carousel__button--prev" class="material-icons">arrow_back_ios</button>
             <button id="carousel__button--next" class="material-icons">arrow_forward_ios</button>
           </div>
         </div>
@@ -3421,5 +3421,8 @@
 
   function popup(){
     window.location.href = "/popups/popups.html"
+  }
+  function moveToHome() {
+    window.location.href = "upgrade_clone_merged.html";
   }
 </script>
