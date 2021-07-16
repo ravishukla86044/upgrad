@@ -15,248 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/python.css" />
-    <style>
-      .video {
-        height: 500px;
-        background-color: rgb(21,27,23);
-        position: relative;
-        display: block;
-        max-width: 100%;
-        margin-bottom: 50px;
-      }
-
-       .video > div{
-      height: 95%;
-      width: 100%;
-    }
-    video{
-      height: 100%;
-      width: 100%;
-    }
-
-
-       /* Menu*/
-
-    .popup_nav {
-      z-index: 11;
-      background: #f4f5f7;
-      position: fixed;
-      top: 81px;
-      width: 320px;
-      height: calc(100vh - 80px);
-      box-shadow: 0 4px 8px rgb(51 54 68 / 5%), 0 6px 10px rgb(51 54 68 / 10%);
-      overflow-y: auto;
-
-      opacity: 1;
-      transform: none;
-      display: none;
-    }
-
-    .closeTab {
-      background: #fff;
-      box-shadow: 0 0 4px rgb(51 54 68 / 5%), 0 2px 6px rgb(51 54 68 / 10%);
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      cursor: pointer;
-      position: -webkit-sticky;
-      position: sticky;
-      z-index: 10;
-      top: 0;
-      border: 0 ;
-
-      padding: 14px 23px;
-
-      text-transform: none;
-
-      fill: #45526c !important;
-
-      height: 24;
-      width: 24;
-    }
-
-    .popup_expand {
-      border-bottom: 1px solid #dfe1e6;
-      padding: 0;
-      display: block;
-
-    }
-
-
-    .popup_content {
-      display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-
-      padding: 14px 23px;
-
-    }
-
-    /* .popup_content1{
-
-        }*/
-    .content_title {
-      font-size: 13px;
-      line-height: 16px;
-      color: #7c8698;
-      margin-bottom: 5px;
-    }
-
-    .content_para {
-      font-size: 16px;
-      line-height: 19px;
-      color: #45526c;
-
-      font-weight: 600;
-
-      display: flex;
-      flex-flow: column;
-    }
-
-    .down_btn {
-      color: rgb(73, 146, 255);
-      width: 2em;
-
-      margin: 0;
-      border: 0;
-      padding: 0;
-      display: inline-block;
-      vertical-align: middle;
-      background: 0 0;
-      font-size: 100%;
-      line-height: 100%;
-    }
-
-    .divider {
-      padding: inherit;
-     
-    }
-
-    .divider > div {
-      background: rgb(223, 225, 230);
-       margin-left: 20px;
-      position: absolute;
-      width: 85%;
-      height: 6px;
-      border-radius: 4px;
-
-      animation: progressColor 1s ease-in-out;
-    }
-
-    .contentOpen {
-      opacity: 1;
-      transform: none;
-      margin-top: -1em;
-      padding: 14px 23px;
-
-      transition: .2s cubic-bezier(.2, .2, .38, .9);
-      margin: 0;
-    }
-
-    .module_show {
-      background: #fff;
-      box-shadow: 0 0 4px rgb(51 54 68 / 5%), 0 2px 6px rgb(51 54 68 / 10%);
-      border-radius: 6px;
-      padding: 10px 16px;
-      margin-bottom: 10px;
-
-      transition: .2s cubic-bezier(.2, .2, .38, .9);
-
-    }
-
-    .module_name {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .module_name>div :nth-child(1) {
-      font-size: 14px;
-      line-height: 140%;
-    }
-
-    .module_name>div :nth-child(2) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      color: #dfe1e6;
-      font-weight: 900;
-      font-size: 36px;
-      line-height: 140%;
-      margin-top: -10px;
-    }
-
-    .count {
-      color: #dfe1e6;
-      font-weight: 600;
-      font-size: 36px;
-      line-height: 140%;
-      margin-top: -10px;
-    }
-
-    .contentList_symbol {
-      margin-top: .5em;
-      display: flex;
-    }
-
-    .contentList_symbol>button {
-      margin-left: auto;
-
-      overflow: visible;
-      width: auto;
-      outline: none;
-
-      border: 0;
-      background-color: white;
-
-
-
-    }
-
-    .close {
-      color: rgb(47, 128, 237);
-    }
-
-    .contentList_symbol>button>span {
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-      margin-top: auto;
-      fill: none;
-    }
-
-    .mList {
-      opacity: 1;
-      transform: none;
-
-      display: flex;
-      flex-flow: column nowrap;
-      margin-top: 15px;
-      border-top: 1px solid #dfe1e6;
-
-    }
-
-    .mList div {
-      margin: 15px 0px 5px;
-    }
-
-    .arr {
-      float: right;
-    }
-    #sho1{
-      display: none;
-    }
-     #sho2{
-      display: none;
-    }
-     #sho3{
-      display: none;
-    }
-     #sho4{
-      display: none;
-    }
    
-    </style>
   </head>
   <body>
 
@@ -265,7 +24,7 @@
      <!--header-->
     <div id="header" class="container1">
       <div id="nav">
-        <a href="upgrade.html"
+        <a href="upgrade_clone_merged.html"
           >upGrad
           <p>Learn Basic Python Programming</p>
         </a>
@@ -863,47 +622,45 @@
 </html>
 
 <script>
- function hidePopup() {
-    let menu = document.querySelector('.popup_nav')
+  function hidePopup() {
+    let menu = document.querySelector(".popup_nav");
     menu.style.display = "none";
-
   }
-  function shoLst1(){
-    let show = document.querySelector('#sho1')
-    show.classList.toggle("display")
+  function shoLst1() {
+    let show = document.querySelector("#sho1");
+    show.classList.toggle("display");
   }
-  function shoLst2(){
-    let show = document.querySelector('#sho2')
-    show.classList.toggle("display")
+  function shoLst2() {
+    let show = document.querySelector("#sho2");
+    show.classList.toggle("display");
   }
-   function shoLst3(){
-    let show = document.querySelector('#sho3')
-    show.classList.toggle("display")
+  function shoLst3() {
+    let show = document.querySelector("#sho3");
+    show.classList.toggle("display");
   }
-   function shoLst4(){
-    let show = document.querySelector('#sho4')
-    show.classList.toggle("display")
+  function shoLst4() {
+    let show = document.querySelector("#sho4");
+    show.classList.toggle("display");
   }
-  function welcmUpstart(){
-    console.log(1)
-    window.location.href = "WelcomeUpstart.html"
-    
+  function welcmUpstart() {
+    window.location.href = "WelcomeUpstart.html";
   }
-  function courseStruct(){
-     window.location.href = "CourseStructure.html"
+  function courseStruct() {
+    window.location.href = "CourseStructure.html";
   }
-   function sessionOver() {
-     window.location.href = "Session.html"
+  function sessionOver() {
+    window.location.href = "Session.html";
   }
-  function mLstShow(){
-    let list = document.querySelector("#mListShow")
-    list.style.display = "none";
+  function mLstShow() {
+    let list = document.querySelector("#mListShow");
+    list.classList.toggle("on");
   }
-  function menuLst(){
-     let menu = document.querySelector('.popup_nav')
+  function menuLst() {
+    let menu = document.querySelector(".popup_nav");
     menu.style.display = "block";
   }
-   function popUp() {
+
+  function popUp() {
     let a = document.getElementById("popUp");
     a.classList.toggle("display");
   }

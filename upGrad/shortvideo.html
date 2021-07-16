@@ -19,7 +19,7 @@
   <body onclick="notPlay(event)">
     <div id="title">
       <div>
-        <a href="upgrade_clone_merged.html" id="logo">upGrad</a>
+        <a href="./upgrade_clone_merged.html" id="logo">upGrad</a>
         <div>Shorts</div>
       </div>
     </div>
@@ -52,7 +52,7 @@
               poster="https://images.upgrad.com/1494092d-ef0c-48f1-af73-ee8992839788-thumbnails-raho-ambitious-4-316x250-brain.png"
             >
               <source
-                src="video/Vicky Kaushal presents _Hyperfocus_ by Chris Bailey _ Standup Book - _LifeLongLearning(360P).mp4"
+                src="./video/Vicky Kaushal presents _Hyperfocus_ by Chris Bailey _ Standup Book - _LifeLongLearning(360P).mp4"
                 type="video/mp4"
               />
             </video>
@@ -106,7 +106,7 @@
             <div class="views">7 views</div>
             <video controls>
               <source
-                src="video/Vicky Kaushal presents _Be Fearless_ by Jean Case _ Standup Book - _LifeLongLearning(360P).mp4"
+                src="./video/Vicky Kaushal presents _Be Fearless_ by Jean Case _ Standup Book - _LifeLongLearning(360P).mp4"
                 type="video/mp4"
               />
             </video>
@@ -128,7 +128,7 @@
             <div class="views">5 views</div>
             <video controls>
               <source
-                src="video/Vicky Kaushal presents _Soonish_ by Kelly _ Zach Weinersmith _ Standup Book _ _LifeLongLearning(360P).mp4"
+                src="./video/Vicky Kaushal presents _Soonish_ by Kelly _ Zach Weinersmith _ Standup Book _ _LifeLongLearning(360P).mp4"
                 type="video/mp4"
               />
             </video>
@@ -182,7 +182,7 @@
             <div class="views">19 views</div>
             <video controls>
               <source
-                src="video/Vicky Kaushal presents Robin Sharma_s 5 AM  Club _ Standup Book - _LifeLongLearning(360P).mp4"
+                src="./video/Vicky Kaushal presents Robin Sharma_s 5 AM  Club _ Standup Book - _LifeLongLearning(360P).mp4"
                 type="video/mp4"
               />
             </video>
@@ -264,10 +264,8 @@
     </div>
     <div id="footer" class="mobileHidden">
       <div>
-        <a href="upgrade.html" id="logofooter">upGrad</a>
-        <div>
-          2015 - 2021 upGrad Education Private Limited. All rights reserved
-        </div>
+        <a href="./upgrade_clone_merged.html" id="logofooter">upGrad</a>
+        <div>2015 - 2021 upGrad Education Private Limited. All rights reserved</div>
       </div>
     </div>
   </body>
@@ -418,6 +416,7 @@
     b.classList.toggle("play");
   }
   function notPlay(e) {
+    e.stopPropagation();
     let a = document.querySelectorAll("video");
     a.forEach(function (b) {
       b.pause();
