@@ -33,6 +33,10 @@ body {
   position: relative;
   margin: 0px 12px;
 }
+#navBarList a {
+  text-decoration: none;
+  color: inherit;
+}
 #headerTopBoxlogo {
   width: 90px;
 
@@ -849,8 +853,7 @@ body {
 
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
-  font-family: "Promixa Nova", -apple-system, BlinkMacSystemFont, Roboto, Arial,
-    sans-serif;
+  font-family: "Promixa Nova", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
 }
 .container_btn {
   display: flex;
