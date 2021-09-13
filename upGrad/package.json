@@ -2,7 +2,7 @@
   "name": "upGrad",
   "version": "1.0.0",
   "description": "UpGrad is a India's largest online higher education company. The main consumer base of this website are working professionals and students. We tried to clone the UpGrad website from the scratch. For this, We have used the HTML, CSS and Vanilla JavaScript.",
-  "main": "upgrade_clone_merged.html",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
