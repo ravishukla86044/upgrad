@@ -739,7 +739,7 @@ body {
 /* Slider images*/
 .carousel {
   overflow: hidden;
-  max-width: 1510px;
+  /* max-width: 1510px; */
   position: relative;
 }
 
@@ -750,7 +750,7 @@ body {
 
 .carousel .carousel__item img {
   width: 100%;
-  max-width: 1510px;
+  /* max-width: 1510px; */
   height: auto;
 }
 
